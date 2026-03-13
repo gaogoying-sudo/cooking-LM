@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking LM 全景建设工作台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-kicker">Blueprint Workspace</span>
+          <span class="brand-title">Cooking LM 全景建设工作台</span>
+        </div>
+        <nav class="topnav" aria-label="主导航">
+          <a href="#overview" class="nav-link active">总览</a>
+          <a href="#boundary" class="nav-link">边界</a>
+          <a href="#goal" class="nav-link">目标</a>
+          <a href="#architecture" class="nav-link">架构</a>
+          <a href="#ai-role" class="nav-link">AI角色</a>
+          <a href="#tech-flow" class="nav-link">技术路线</a>
+          <a href="#tech-summary" class="nav-link">当前策略</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="overview" class="hero section section-primary reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Overview</span>
+            <h1>Cooking LM</h1>
+            <p class="hero-subtitle">
+              面向菜谱理解、专家经验沉淀、策略决策与设备交付的统一智能能力中枢
+            </p>
+            <p class="hero-description">
+              Cooking LM 不是单一模型，也不是简单的菜谱问答工具。它围绕“客户需求理解、菜品匹配与生成、工艺和参数适配、设备执行交付、结果反馈优化”构建系统性能力底座，真正沉淀的是菜谱知识、专家经验、调整逻辑和交付策略，逐步形成公司自己的智能资产与交付能力。
+            </p>
+            <div class="tag-row" aria-label="总览标签">
+              <span class="tag">需求到交付</span>
+              <span class="tag">菜谱与知识</span>
+              <span class="tag">专家经验沉淀</span>
+              <span class="tag">AI辅助推理</span>
+              <span class="tag">结果闭环优化</span>
+            </div>
+          </div>
+
+          <div class="hero-map panel">
+            <div class="map-core">
+              <span class="node-label">统一智能中枢</span>
+              <strong>Cooking LM 能力中枢</strong>
+              <p>把需求、知识、策略、模型与设备交付连接为持续进化的统一能力主干。</p>
+            </div>
+            <div class="map-ring">
+              <div class="map-node node-a">客户需求</div>
+              <div class="map-node node-b">菜品理解</div>
+              <div class="map-node node-c">菜谱知识</div>
+              <div class="map-node node-d">交付策略</div>
+              <div class="map-node node-e">AI推理</div>
+              <div class="map-node node-f">设备执行</div>
+              <div class="map-node node-g">反馈优化</div>
+            </div>
+            <div class="flow-hint">客户需求 → 菜品理解 → 菜谱知识 → 交付策略 → AI推理 → 设备执行 → 反馈优化</div>
+          </div>
+        </section>
+
+        <section id="boundary" class="section section-secondary section-light reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Boundary Definition</span>
+              <h2>Cooking LM 不是什么</h2>
+            </div>
+            <p>
+              这一块用于帮助团队快速收敛边界。Cooking LM 的建设重点是知识、策略与交付能力沉淀，而不是做一个看起来像 AI 的表层入口。
+            </p>
+          </div>
+
+          <div class="boundary-grid">
+            <article class="boundary-card">
+              <strong>不是单纯的聊天机器人</strong>
+              <p>它不以自然语言交互本身为目标，而以可持续交付能力建设为目标。</p>
+            </article>
+            <article class="boundary-card">
+              <strong>不是简单的菜谱搜索器</strong>
+              <p>它不只是返回菜谱，而是要理解菜品、工艺、参数和设备适配关系。</p>
+            </article>
+            <article class="boundary-card">
+              <strong>不是临时把数据交给大模型求答案</strong>
+              <p>模型只负责局部推理与加工，核心资产必须沉淀在自有知识和规则体系中。</p>
+            </article>
+            <article class="boundary-card">
+              <strong>不是语音入口型展示 MVP</strong>
+              <p>页面或入口只是承载层，真正需要建设的是数据主干、知识主干和交付闭环。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="goal" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">North Star</span>
+              <h2>终极目标</h2>
+            </div>
+            <p>
+              北极星不是做一个会说话的模型，而是让系统逐步承接原本依赖口味工程师现场完成的迁移、调试和交付工作。
+            </p>
+          </div>
+
+          <div class="goal-map panel">
+            <div class="goal-node goal-center">
+              <span class="node-label">中心目标</span>
+              <strong>让客户买到设备后，逐步减少对口味工程师现场支持的依赖</strong>
+              <p>通过沉淀菜谱知识、专家经验、参数调整逻辑和交付策略，逐步支撑已有菜迁移、录菜、调试与交付，不再每次都依赖工程师到现场兜底。</p>
+            </div>
+            <div class="goal-node goal-1">
+              <strong>已有菜迁移交付</strong>
+              <p>帮助客户把原有菜品从人工大锅经验迁移到设备侧执行。</p>
+            </div>
+            <div class="goal-node goal-2">
+              <strong>专家经验显性化</strong>
+              <p>把口味工程师在现场的判断、调整和教学经验沉淀下来。</p>
+            </div>
+            <div class="goal-node goal-3">
+              <strong>菜谱与参数结构化</strong>
+              <p>把菜谱、步骤、食材、调味料、份量和设备参数变成结构化对象。</p>
+            </div>
+            <div class="goal-node goal-4">
+              <strong>策略与规则协同</strong>
+              <p>明确哪些场景可自动建议，哪些必须受规则和人工确认约束。</p>
+            </div>
+            <div class="goal-node goal-5">
+              <strong>客户自助录菜辅助</strong>
+              <p>逐步降低客户使用设备和完成录菜、调试、交付的门槛。</p>
+            </div>
+            <div class="goal-node goal-6">
+              <strong>反馈驱动迭代</strong>
+              <p>通过结果表现、使用反馈和调整记录不断修正知识与策略。</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="architecture" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Architecture</span>
+              <h2>总体系统架构</h2>
+            </div>
+            <p>
+              这五层不是纯技术拆分，而是业务能力如何从原始资产一路沉淀为可交付系统的结构表达。
+            </p>
+          </div>
+
+          <div class="architecture-stack panel">
+            <article class="arch-layer">
+              <div class="layer-header">
+                <span class="layer-index">01</span>
+                <div>
+                  <h3>原始数据层</h3>
+                  <p>存放公司最原始的资产来源，包括菜谱、录菜过程、设备日志、客户需求、专家记录以及交付过程中的多模态素材。</p>
+                </div>
+              </div>
+              <div class="layer-nodes">
+                <span>菜谱数据</span>
+                <span>录菜过程</span>
+                <span>设备日志</span>
+                <span>客户需求</span>
+                <span>专家记录</span>
+                <span>图像/视频/语音素材</span>
+              </div>
+            </article>
+
+            <article class="arch-layer">
+              <div class="layer-header">
+                <span class="layer-index">02</span>
+                <div>
+                  <h3>结构化知识层</h3>
+                  <p>这一层承载公司从原始数据中提炼出的知识结果，包括菜品规格、菜谱意图、工艺阶段、参数对象、调整动作、调整原因和标杆经验。</p>
+                </div>
+              </div>
+              <div class="layer-nodes">
+                <span>Dish Specification</span>
+                <span>Recipe Intent</span>
+                <span>工艺阶段</span>
+                <span>参数对象</span>
+                <span>调整动作</span>
+                <span>调整原因</span>
+                <span>标杆菜谱</span>
+                <span>经验规则</span>
+              </div>
+            </article>
+
+            <article class="arch-layer">
+              <div class="layer-header">
+                <span class="layer-index">03</span>
+                <div>
+                  <h3>策略规则层</h3>
+                  <p>负责控制系统能不能做、什么时候做、做到什么程度，以及是否需要人工确认，是系统稳定性的关键层。</p>
+                </div>
+              </div>
+              <div class="layer-nodes">
+                <span>推荐策略</span>
+                <span>适配规则</span>
+                <span>风险阈值</span>
+                <span>置信度控制</span>
+                <span>人工确认机制</span>
+                <span>设备约束规则</span>
+              </div>
+            </article>
+
+            <article class="arch-layer">
+              <div class="layer-header">
+                <span class="layer-index">04</span>
+                <div>
+                  <h3>模型推理层</h3>
+                  <p>这里是大模型或其他 AI 能力介入的位置，但只负责局部推理、抽取、匹配、归纳和候选生成，不替代整个知识与规则系统。</p>
+                </div>
+              </div>
+              <div class="layer-nodes">
+                <span>需求解析</span>
+                <span>相似检索</span>
+                <span>方案对比</span>
+                <span>参数建议</span>
+                <span>多模态理解</span>
+                <span>解释生成</span>
+              </div>
+            </article>
+
+            <article class="arch-layer">
+              <div class="layer-header">
+                <span class="layer-index">05</span>
+                <div>
+                  <h3>执行交付层</h3>
+                  <p>最终把系统能力交付到客户与设备端，输出可执行建议、录菜辅助、交付支持与反馈回流能力。</p>
+                </div>
+              </div>
+              <div class="layer-nodes">
+                <span>客户交互</span>
+                <span>录菜辅助</span>
+                <span>参数建议输出</span>
+                <span>设备执行支持</span>
+                <span>交付确认</span>
+                <span>反馈回流</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="assets" class="section section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Core Assets</span>
+              <h2>公司真正的资产</h2>
+            </div>
+            <p>
+              外部模型可以参与推理和加工，但公司的长期护城河，在于把菜谱、经验、策略、规则和设备交付能力沉淀为自己的知识与执行系统。
+            </p>
+          </div>
+
+          <div class="asset-wall panel">
+            <div class="asset-intro">
+              <strong>核心资产不是外部大模型本身，而是可持续沉淀、可持续复用、可持续放大的业务知识与交付能力。</strong>
+            </div>
+            <div class="asset-grid">
+              <span class="asset-chip">菜谱数据</span>
+              <span class="asset-chip">专家经验</span>
+              <span class="asset-chip">调整逻辑</span>
+              <span class="asset-chip">交付策略</span>
+              <span class="asset-chip">设备适配知识</span>
+              <span class="asset-chip">结果反馈数据</span>
+              <span class="asset-chip">多模态素材</span>
+              <span class="asset-chip">结构化知识与规则体系</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="ai-role" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">AI Role Split</span>
+              <h2>AI 角色分工</h2>
+            </div>
+            <p>
+              Cooking LM 不是把 GPT 当数据库或总控大脑，而是让公司系统主导数据、知识、规则与流程，让模型在合适位置承担加工、理解、匹配和候选生成。
+            </p>
+          </div>
+
+          <div class="ai-role-grid">
+            <article class="role-card panel">
+              <span class="role-kicker">Offline</span>
+              <h3>离线知识加工</h3>
+              <p>这类任务不要求实时，最适合借助外部大模型做历史资产加工，但结果必须回写到公司自己的知识系统中。</p>
+              <ul>
+                <li>历史菜谱解析</li>
+                <li>专家纪要抽取</li>
+                <li>同菜多版本差异分析</li>
+                <li>图像 / 视频 / 语音素材理解</li>
+                <li>经验规则候选整理</li>
+                <li>数据清洗与标准化</li>
+              </ul>
+            </article>
+
+            <article class="role-card panel">
+              <span class="role-kicker">Online</span>
+              <h3>在线局部推理</h3>
+              <p>在线阶段只让模型处理当前任务真正需要的少量上下文，先由公司系统检索、筛选、组织，再交给模型完成局部认知任务。</p>
+              <ul>
+                <li>客户需求解析</li>
+                <li>相似菜谱候选理解</li>
+                <li>当前场景方案对比</li>
+                <li>参数建议生成</li>
+                <li>结果解释与说明</li>
+                <li>多模态补充理解</li>
+              </ul>
+            </article>
+
+            <article class="role-card panel role-card-solid">
+              <span class="role-kicker">Solidify</span>
+              <h3>长期可固化能力</h3>
+              <p>越是高频、稳定、可验证的能力，越不应该长期依赖外部大模型，而应沉淀为规则、小模型或本地逻辑。</p>
+              <ul>
+                <li>单位换算</li>
+                <li>参数边界检查</li>
+                <li>设备兼容判断</li>
+                <li>已验证映射规则</li>
+                <li>基础排序 / 打分</li>
+                <li>固定约束判断</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="context-strategy" class="section section-secondary section-light reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Context Strategy</span>
+              <h2>为什么不能每次把全量数据上传给大模型</h2>
+            </div>
+            <p>
+              真正可持续的系统不是“每次临时喂全量数据再求答案”，而是先完成知识沉淀，再把精简上下文交给模型处理当前任务。
+            </p>
+          </div>
+
+          <div class="compare-grid">
+            <article class="compare-card compare-wrong">
+              <span class="compare-label">错误路径</span>
+              <h3>让模型反复重新理解所有历史数据</h3>
+              <ul>
+                <li>每次请求都依赖重新上传大量数据</li>
+                <li>成本高，上下文容易混乱</li>
+                <li>响应速度慢</li>
+                <li>知识无法沉淀</li>
+                <li>规则难稳定、结果难复盘</li>
+                <li>公司资产长期停留在 prompt 里</li>
+              </ul>
+            </article>
+
+            <article class="compare-card compare-right">
+              <span class="compare-label">正确路径</span>
+              <h3>公司系统先沉淀，再把少量相关上下文交给模型</h3>
+              <ul>
+                <li>原始数据先进入公司系统</li>
+                <li>系统先做结构化和知识沉淀</li>
+                <li>先检索命中少量相关上下文</li>
+                <li>再把精简上下文交给模型</li>
+                <li>模型只做当前任务推理</li>
+                <li>结果回写知识与流程体系</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="pipeline" class="section section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Key Pipeline</span>
+              <h2>关键建设环节</h2>
+            </div>
+            <p>
+              这不是一次性调用大模型的直线流程，而是围绕数据、知识、策略、推理和交付持续迭代的建设闭环。
+            </p>
+          </div>
+
+          <div class="pipeline-wrap panel">
+            <div class="pipeline-track">
+              <div class="pipeline-node">客户需求输入</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">菜品与场景理解</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">原始数据采集</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">结构化知识提炼</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">标杆与经验沉淀</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">检索与匹配</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">方案建议生成</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">规则与风险校验</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">客户/设备执行交付</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node pipeline-node-accent">结果反馈回流</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tech-flow" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Technical Flow</span>
+              <h2>技术主流程</h2>
+            </div>
+            <p>
+              大模型参与的是链路中的局部认知任务，而不是替代整个系统完成记忆、规则和执行主逻辑。
+            </p>
+          </div>
+
+          <div class="pipeline-wrap panel">
+            <div class="pipeline-track tech-track">
+              <div class="pipeline-node">原始数据进入系统</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">数据清洗与标准化</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">结构化抽取</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">知识对象沉淀</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">索引 / 检索构建</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">规则层筛选</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node pipeline-node-ai">模型参与推理</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">输出候选建议</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">人工 / 规则确认</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node">客户 / 设备执行</div>
+              <div class="pipeline-arrow">→</div>
+              <div class="pipeline-node pipeline-node-accent">结果回流与再沉淀</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="system-core" class="section section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">System Core</span>
+              <h2>系统内必须沉淀的能力</h2>
+            </div>
+            <p>
+              公司的长期护城河，不在于“是否拥有一个自建大模型”，而在于是否把菜谱、经验、策略、规则、参数逻辑和设备适配能力沉淀成自己的知识与执行系统。
+            </p>
+          </div>
+
+          <div class="asset-wall panel system-wall">
+            <div class="asset-intro">
+              <strong>这些能力属于底座、主干、不可外包部分，必须在公司自己的系统中可控、可复盘、可版本化。</strong>
+            </div>
+            <div class="system-grid">
+              <span class="asset-chip">数据存储与版本管理</span>
+              <span class="asset-chip">菜谱主数据</span>
+              <span class="asset-chip">结构化知识对象</span>
+              <span class="asset-chip">调整动作与原因记录</span>
+              <span class="asset-chip">标杆菜谱库</span>
+              <span class="asset-chip">规则体系</span>
+              <span class="asset-chip">风险阈值体系</span>
+              <span class="asset-chip">检索索引</span>
+              <span class="asset-chip">人工确认流程</span>
+              <span class="asset-chip">反馈回流机制</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="tech-decision" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Deployment Decision</span>
+              <h2>本地化与模型部署判断</h2>
+            </div>
+            <p>
+              当前真正的短板不在“有没有自己的大模型”，而在于数据、知识、规则和流程主干是否已经建立起来。
+            </p>
+          </div>
+
+          <div class="decision-flow panel">
+            <article class="decision-step">
+              <span class="compare-label">判断一</span>
+              <h3>当前阶段：不建议先投入重资产模型部署</h3>
+              <ul>
+                <li>知识尚未结构化</li>
+                <li>高频 AI 任务尚未稳定</li>
+                <li>真正短板不是模型，而是数据与知识工程</li>
+                <li>缺少维护私有模型服务的成本与能力</li>
+                <li>现在更值钱的是规则、知识和流程沉淀</li>
+              </ul>
+            </article>
+
+            <div class="decision-arrow">↓</div>
+
+            <article class="decision-step decision-mid">
+              <span class="compare-label">判断二</span>
+              <h3>出现这些条件时，再考虑本地化 / 私有化</h3>
+              <ul>
+                <li>高并发固定任务已经形成</li>
+                <li>云端成本持续升高</li>
+                <li>延迟要求明显提升</li>
+                <li>隐私隔离诉求明显提高</li>
+                <li>已经沉淀出可蒸馏的小任务</li>
+                <li>团队具备维护推理服务能力</li>
+              </ul>
+            </article>
+
+            <div class="decision-arrow">↓</div>
+
+            <article class="decision-step decision-strong">
+              <span class="compare-label">判断三</span>
+              <h3>真要投入算力时，优先用于这些方向</h3>
+              <ul>
+                <li>小模型推理</li>
+                <li>本地 OCR / ASR / 多模态预处理</li>
+                <li>embedding / rerank 替代</li>
+                <li>固定分类任务</li>
+                <li>高频参数判断任务</li>
+                <li>局部专用模型服务</li>
+              </ul>
+              <p class="decision-note">不是一上来追求自建 GPT 替代品，而是优先固化高频、稳定、成本敏感的局部任务。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="roadmap" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Roadmap</span>
+              <h2>建设路线</h2>
+            </div>
+            <p>
+              当前阶段不是急着做“大而全智能体”，而是先建立资产、知识、策略与交付协同的主干能力，再逐步让 AI 发挥价值。
+            </p>
+          </div>
+
+          <div class="roadmap panel">
+            <article class="phase current">
+              <span class="phase-tag">Phase 1</span>
+              <h3>资产沉淀与知识主干建立</h3>
+              <p>当前阶段不是做模型炫技，而是先把原始数据、知识对象、规则边界和版本体系建立起来。</p>
+              <ul>
+                <li>数据对象统一</li>
+                <li>知识结构建模</li>
+                <li>规则边界定义</li>
+                <li>核心流程梳理</li>
+              </ul>
+            </article>
+            <div class="phase-arrow">→</div>
+            <article class="phase">
+              <span class="phase-tag">Phase 2</span>
+              <h3>AI加工与检索增强</h3>
+              <p>这一阶段让 AI 成为“加工厂”和“检索辅助器”，提升历史资产可用性，而不是直接替代业务系统。</p>
+              <ul>
+                <li>历史数据批量加工</li>
+                <li>结构化抽取与归类</li>
+                <li>相似检索与召回增强</li>
+                <li>候选知识生成</li>
+              </ul>
+            </article>
+            <div class="phase-arrow">→</div>
+            <article class="phase">
+              <span class="phase-tag">Phase 3</span>
+              <h3>策略协同与交付辅助</h3>
+              <p>这一阶段重点不是开放式生成，而是把检索、规则、建议和人工确认组合成稳定交付链。</p>
+              <ul>
+                <li>建议生成与解释</li>
+                <li>风险控制与阈值判断</li>
+                <li>人工确认与回退机制</li>
+                <li>客户录菜辅助</li>
+              </ul>
+            </article>
+            <div class="phase-arrow">→</div>
+            <article class="phase">
+              <span class="phase-tag">Phase 4</span>
+              <h3>反馈闭环与持续优化</h3>
+              <p>通过执行结果和反馈数据，持续修正知识、规则、建议质量和能力边界，形成长期演进系统。</p>
+              <ul>
+                <li>反馈回流</li>
+                <li>规则修正</li>
+                <li>知识再沉淀</li>
+                <li>高价值能力逐步固化</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="focus" class="section section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Priority Scope</span>
+              <h2>当前重点</h2>
+            </div>
+            <p>
+              当前阶段的关键，不是把所有能力一次性做全，而是先抓最贴近真实交付价值、最能沉淀公司资产的能力主线。
+            </p>
+          </div>
+
+          <div class="focus-grid">
+            <article class="focus-column focus-primary panel">
+              <h3>当前先做</h3>
+              <ul>
+                <li>已有菜迁移交付场景</li>
+                <li>标杆菜谱沉淀</li>
+                <li>专家经验显性化</li>
+                <li>客户自助录菜辅助</li>
+                <li>数据与知识主干建设</li>
+              </ul>
+            </article>
+
+            <article class="focus-column focus-secondary panel">
+              <h3>暂不优先</h3>
+              <ul>
+                <li>开放式创意菜自动生成</li>
+                <li>复杂个性化风味创作</li>
+                <li>全量设备场景一次性覆盖</li>
+                <li>重度可视化分析看板</li>
+              </ul>
+            </article>
+
+            <article class="focus-column focus-muted panel">
+              <h3>当前不做</h3>
+              <ul>
+                <li>自建通用大模型</li>
+                <li>大而全私有化替代 GPT</li>
+                <li>重资产 GPU 集群先行</li>
+                <li>脱离数据治理直接做端到端 AI</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="tech-summary" class="section section-secondary reveal">
+          <div class="summary-banner panel">
+            <span class="eyebrow">Strategy Summary</span>
+            <h2>当前技术策略总结</h2>
+            <p>
+              先把公司的数据、知识、规则和流程沉淀下来，让大模型参与局部加工和推理；等高频任务稳定后，再逐步把可固化能力沉淀为规则、小模型或本地执行能力。
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>Cooking LM 全景建设工作台</strong>
+          <p>单页 HTML 工作台原型，当前覆盖业务架构、AI 技术架构与落地路线，后续继续细化内容与轻交互。</p>
+        </div>
+      </footer>
+    </div>
+
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
