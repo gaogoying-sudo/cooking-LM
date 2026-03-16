@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking LM 技术交付工作台</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="tech-delivery-light.css" />
+  </head>
+  <body class="tech-delivery-page">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-kicker">Technical Delivery Workspace</span>
+          <span class="brand-title">Cooking LM 技术交付工作台</span>
+          <a href="index.html" class="page-switch">返回 CLM 总控导航台</a>
+          <a href="technical-delivery-workbench.html" class="page-switch">查看新版技术交付页</a>
+          <a href="tech-layered-knowledge-matrix.html" class="page-switch">查看知识形成案例矩阵页</a>
+        </div>
+        <nav class="topnav" aria-label="技术交付导航">
+          <a href="#definition" class="nav-link active">定义</a>
+          <a href="#layers" class="nav-link">技术分层</a>
+          <a href="#modules" class="nav-link">模块清单</a>
+          <a href="#objects" class="nav-link">技术对象</a>
+          <a href="#states" class="nav-link">状态流转</a>
+          <a href="#phases" class="nav-link">阶段交付</a>
+          <a href="#investment" class="nav-link">投入判断</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="definition" class="section section-primary reveal delivery-definition">
+          <div class="definition-header">
+            <div class="section-heading">
+              <span class="eyebrow">Definition</span>
+              <h1>Cooking LM 技术交付工作台</h1>
+              <p class="hero-subtitle">
+                从语料加工、知识沉淀、模型推理到 Agent 编排与输出执行的技术系统设计图
+              </p>
+              <p class="hero-description">
+                最终交付物不是单独一个模型，而是一套以公司私有语料为原材料、通过结构化抽取、知识沉淀、检索、规则和模型推理组成的内部智能系统。
+              </p>
+            </div>
+
+            <div class="definition-judgements">
+              <article class="judgement-card">
+                <strong class="judgement-title">交付目标</strong>
+                <p>把语料加工成可追踪、可审核、可执行的内部智能系统。</p>
+              </article>
+              <article class="judgement-card">
+                <strong class="judgement-title">能力边界</strong>
+                <p>模型负责理解与推理，知识、规则与状态必须沉淀在公司系统中。</p>
+              </article>
+              <article class="judgement-card">
+                <strong class="judgement-title">最终输出</strong>
+                <p>输出给工作台、审核链路与设备执行结果，而不是一个孤立模型答案。</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="definition-chain panel definition-chain-vertical">
+            <div class="definition-step">
+              <strong>原始语料</strong>
+              <p>文本、图片、视频、音频、日志</p>
+            </div>
+            <div class="definition-chain-arrow">↓</div>
+            <div class="definition-step">
+              <strong>结构化数据</strong>
+              <p>字段、参数、步骤、风险标签</p>
+            </div>
+            <div class="definition-chain-arrow">↓</div>
+            <div class="definition-step">
+              <strong>知识资产</strong>
+              <p>规则、标杆菜谱、依赖关系</p>
+            </div>
+            <div class="definition-chain-arrow">↓</div>
+            <div class="definition-step definition-step-core">
+              <strong>决策能力</strong>
+              <p>检索、判断、解释、参数建议</p>
+            </div>
+            <div class="definition-chain-arrow">↓</div>
+            <div class="definition-step">
+              <strong>最终交付系统</strong>
+              <p>工作台、审核链路、设备输出</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="transformation" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Material Path</span>
+              <h2>语料如何变成公司内部智能系统</h2>
+            </div>
+            <p>技术交付的起点不是模型，而是原始语料如何被逐层加工为结构化数据、知识资产和可执行决策能力。</p>
+          </div>
+
+          <div class="transform-grid panel">
+            <article class="transform-stage">
+              <h3>原始语料</h3>
+              <ul>
+                <li>文本 / 菜谱 / 纪要</li>
+                <li>图片 / 视频 / 音频</li>
+                <li>参数记录 / 调整记录</li>
+                <li>设备日志</li>
+              </ul>
+            </article>
+            <article class="transform-stage">
+              <h3>结构化数据</h3>
+              <ul>
+                <li>菜品名称</li>
+                <li>工艺步骤</li>
+                <li>参数项</li>
+                <li>调整动作 / 原因</li>
+                <li>风险标签 / 设备上下文</li>
+              </ul>
+            </article>
+            <article class="transform-stage">
+              <h3>知识资产</h3>
+              <ul>
+                <li>经验规则</li>
+                <li>标杆菜谱</li>
+                <li>参数依赖关系</li>
+                <li>风险映射</li>
+                <li>失败模式</li>
+              </ul>
+            </article>
+            <article class="transform-stage transform-stage-accent">
+              <h3>决策能力</h3>
+              <ul>
+                <li>检索</li>
+                <li>推荐</li>
+                <li>判断</li>
+                <li>解释</li>
+                <li>风险提醒 / 参数建议</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="deliverable" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Deliverable</span>
+              <h2>最终交付物不是单一模型</h2>
+            </div>
+            <p>数据库负责“存”，模型负责“理解和推理”，Agent 负责“把多个能力串起来完成任务”，最终交付物是一整套系统而不是单点对象。</p>
+          </div>
+
+          <div class="deliverable-composition panel">
+            <div class="deliverable-cluster cluster-storage">
+              <h3>存储与资产层</h3>
+              <div class="asset-grid delivery-mini-grid">
+                <span class="asset-chip">数据库</span>
+                <span class="asset-chip">素材库</span>
+                <span class="asset-chip">知识库</span>
+                <span class="asset-chip">向量检索库</span>
+              </div>
+            </div>
+            <div class="deliverable-arrow">→</div>
+            <div class="deliverable-cluster cluster-intelligence">
+              <h3>理解与决策层</h3>
+              <div class="asset-grid delivery-mini-grid">
+                <span class="asset-chip">模型服务</span>
+                <span class="asset-chip">规则引擎</span>
+                <span class="asset-chip">Agent 工作流</span>
+                <span class="asset-chip">在线决策服务</span>
+              </div>
+            </div>
+            <div class="deliverable-arrow">→</div>
+            <div class="deliverable-cluster cluster-output">
+              <h3>工作台与执行层</h3>
+              <div class="asset-grid delivery-mini-grid">
+                <span class="asset-chip">前端工作台</span>
+                <span class="asset-chip">审核链路</span>
+                <span class="asset-chip">结构化结果输出</span>
+                <span class="asset-chip">设备执行接口</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="layers" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Layer Map</span>
+              <h2>技术分层与处理链路</h2>
+            </div>
+            <p>完整技术交付不是单层模型服务，而是 8 层系统共同把语料加工为可解释、可审核、可执行的内部智能系统。</p>
+          </div>
+
+          <div class="delivery-layer-stack panel">
+            <article class="delivery-layer is-done">
+              <div class="delivery-layer-head">
+                <h3>原始数据接入层</h3>
+                <span class="status-tag done">已完成</span>
+              </div>
+              <p>做什么：接入文本、素材、日志和记录。输入：语料。输出：可追踪原始数据。</p>
+            </article>
+            <article class="delivery-layer is-progress key-layer">
+              <div class="delivery-layer-head">
+                <h3>结构化加工层</h3>
+                <span class="status-tag progress">进行中</span>
+              </div>
+              <p>做什么：抽取字段与对象。输入：原始语料。输出：结构化记录与候选对象。</p>
+            </article>
+            <article class="delivery-layer is-progress key-layer">
+              <div class="delivery-layer-head">
+                <h3>知识沉淀层</h3>
+                <span class="status-tag progress">进行中</span>
+              </div>
+              <p>做什么：沉淀知识资产。输入：结构化记录。输出：规则、标杆菜谱、知识对象。</p>
+            </article>
+            <article class="delivery-layer is-progress">
+              <div class="delivery-layer-head">
+                <h3>检索层</h3>
+                <span class="status-tag progress">进行中</span>
+              </div>
+              <p>做什么：召回相关上下文。输入：查询与知识资产。输出：候选内容集合。</p>
+            </article>
+            <article class="delivery-layer is-progress key-layer">
+              <div class="delivery-layer-head">
+                <h3>规则与策略层</h3>
+                <span class="status-tag progress">进行中</span>
+              </div>
+              <p>做什么：判断边界和风险。输入：候选内容。输出：可用建议范围与审核要求。</p>
+            </article>
+            <article class="delivery-layer is-progress">
+              <div class="delivery-layer-head">
+                <h3>模型推理层</h3>
+                <span class="status-tag progress">进行中</span>
+              </div>
+              <p>做什么：理解、解释和候选生成。输入：精简上下文。输出：建议与解释结果。</p>
+            </article>
+            <article class="delivery-layer is-todo">
+              <div class="delivery-layer-head">
+                <h3>Agent 工作流层</h3>
+                <span class="status-tag todo">待建设</span>
+              </div>
+              <p>做什么：把检索、规则、模型、审核串成任务链。输入：任务请求。输出：完整工作流执行结果。</p>
+            </article>
+            <article class="delivery-layer is-todo">
+              <div class="delivery-layer-head">
+                <h3>输出执行层</h3>
+                <span class="status-tag todo">待建设</span>
+              </div>
+              <p>做什么：结果交付给工作台与设备。输入：已确认结果。输出：结构化建议、执行指令与回流记录。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="modules" class="section section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Module Map</span>
+              <h2>完整交付需要建设的技术模块</h2>
+            </div>
+            <p>每个模块都对应清晰职责、交付项和核心对象，避免系统建设停留在抽象概念层。</p>
+          </div>
+
+          <div class="module-grid">
+            <article class="module-card panel">
+              <h3>数据底座开发</h3>
+              <p>职责：建立统一存储和版本管理。</p>
+              <p>交付项：数据 schema、版本策略。</p>
+              <p>对象：dataset_id、version_id。</p>
+            </article>
+            <article class="module-card panel">
+              <h3>数据接入与预处理</h3>
+              <p>职责：接入语料并做标准化。</p>
+              <p>交付项：接入管道、清洗规则。</p>
+              <p>对象：source_type、raw_record。</p>
+            </article>
+            <article class="module-card panel">
+              <h3>AI 结构化抽取服务</h3>
+              <p>职责：把语料转成字段与对象。</p>
+              <p>交付项：抽取服务、候选对象。</p>
+              <p>对象：field_map、extraction_job。</p>
+            </article>
+            <article class="module-card panel">
+              <h3>知识沉淀与审核模块</h3>
+              <p>职责：候选知识审核入库。</p>
+              <p>交付项：状态流转、审核记录。</p>
+              <p>对象：knowledge_id、review_log。</p>
+            </article>
+            <article class="module-card panel">
+              <h3>向量检索模块</h3>
+              <p>职责：召回相似内容与上下文。</p>
+              <p>交付项：索引、召回接口。</p>
+              <p>对象：embedding_id、recall_set。</p>
+            </article>
+            <article class="module-card panel">
+              <h3>规则引擎与策略配置</h3>
+              <p>职责：控制约束、边界和审核。</p>
+              <p>交付项：策略配置、阈值规则。</p>
+              <p>对象：rule_id、risk_level。</p>
+            </article>
+            <article class="module-card panel">
+              <h3>在线决策服务</h3>
+              <p>职责：聚合检索、规则和模型。</p>
+              <p>交付项：建议接口、解释接口。</p>
+              <p>对象：decision_context、response_pack。</p>
+            </article>
+            <article class="module-card panel">
+              <h3>Agent 编排层</h3>
+              <p>职责：串联多个能力完成任务。</p>
+              <p>交付项：流程模版、任务编排。</p>
+              <p>对象：workflow_id、task_state。</p>
+            </article>
+            <article class="module-card panel">
+              <h3>前端 / 工作台</h3>
+              <p>职责：承载审核、查询和交付。</p>
+              <p>交付项：操作界面、状态展示。</p>
+              <p>对象：workspace_state、review_action。</p>
+            </article>
+            <article class="module-card panel">
+              <h3>评测与监控</h3>
+              <p>职责：跟踪质量、性能和风险。</p>
+              <p>交付项：评测集、监控面板。</p>
+              <p>对象：metric_id、evaluation_result。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="objects" class="section section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Object Map</span>
+              <h2>核心技术对象清单</h2>
+            </div>
+            <p>技术系统能否稳定交付，关键在于对象建模是否完整、字段是否清晰、对象之间的关联是否可追踪。</p>
+          </div>
+
+          <div class="object-grid">
+            <article class="object-card panel"><h3>菜品</h3><p>字段：dish_id、name、category</p><p>关联：菜谱版本、标杆菜谱</p><p>状态：进行中</p></article>
+            <article class="object-card panel"><h3>菜谱版本</h3><p>字段：version_id、dish_id、param_pack</p><p>关联：设备上下文、评价结果</p><p>状态：进行中</p></article>
+            <article class="object-card panel"><h3>工艺步骤</h3><p>字段：step_id、stage、duration</p><p>关联：参数项、调整动作</p><p>状态：进行中</p></article>
+            <article class="object-card panel"><h3>参数项</h3><p>字段：param_key、target_value、unit</p><p>关联：步骤、设备上下文</p><p>状态：进行中</p></article>
+            <article class="object-card panel"><h3>食材</h3><p>字段：ingredient_id、name、weight</p><p>关联：菜谱版本、风险标签</p><p>状态：进行中</p></article>
+            <article class="object-card panel"><h3>调味料</h3><p>字段：seasoning_id、dose、timing</p><p>关联：步骤、参数项</p><p>状态：进行中</p></article>
+            <article class="object-card panel"><h3>调整动作</h3><p>字段：action_id、before、after</p><p>关联：调整原因、评价结果</p><p>状态：进行中</p></article>
+            <article class="object-card panel"><h3>调整原因</h3><p>字段：reason_id、reason_type、evidence</p><p>关联：动作、风险标签</p><p>状态：进行中</p></article>
+            <article class="object-card panel"><h3>风险标签</h3><p>字段：risk_id、level、trigger</p><p>关联：菜品、步骤、设备</p><p>状态：待建设</p></article>
+            <article class="object-card panel"><h3>标杆菜谱</h3><p>字段：benchmark_id、reference_type</p><p>关联：菜品、评价结果</p><p>状态：进行中</p></article>
+            <article class="object-card panel"><h3>设备上下文</h3><p>字段：device_id、mode、constraint</p><p>关联：菜谱版本、参数项</p><p>状态：待建设</p></article>
+            <article class="object-card panel"><h3>评价结果</h3><p>字段：result_id、score、comment</p><p>关联：标杆菜谱、调整动作</p><p>状态：待建设</p></article>
+          </div>
+        </section>
+
+        <section id="states" class="section section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Knowledge Lifecycle</span>
+              <h2>知识状态流转与审核机制</h2>
+            </div>
+            <p>AI 只能生成候选，不能直接成为有效知识；知识必须经过状态流转、审核、生效和失效管理。</p>
+          </div>
+
+          <div class="state-board panel waterfall-board">
+            <div class="waterfall-flow">
+              <article class="waterfall-card">
+                <strong>草稿</strong>
+                <p><strong>谁生成：</strong>人工录入或初始整理。</p>
+                <p><strong>谁审核：</strong>暂无，先做内容整理。</p>
+                <p><strong>如何留痕：</strong>保留来源、录入人、时间。</p>
+                <p><strong>进入下一状态：</strong>完成基础字段整理后进入候选。</p>
+              </article>
+              <div class="waterfall-arrow">↓</div>
+              <article class="waterfall-card">
+                <strong>候选</strong>
+                <p><strong>谁生成：</strong>AI 抽取或批处理加工。</p>
+                <p><strong>谁审核：</strong>审核工作台初筛。</p>
+                <p><strong>如何留痕：</strong>保留抽取任务、模型版本、原始证据。</p>
+                <p><strong>进入下一状态：</strong>对象绑定完整后进入待验证。</p>
+              </article>
+              <div class="waterfall-arrow">↓</div>
+              <article class="waterfall-card">
+                <strong>待验证</strong>
+                <p><strong>谁生成：</strong>系统自动聚合候选对象。</p>
+                <p><strong>谁审核：</strong>领域专家、口味工程师。</p>
+                <p><strong>如何留痕：</strong>记录审核意见、版本与修改原因。</p>
+                <p><strong>进入下一状态：</strong>通过验证后进入已验证。</p>
+              </article>
+              <div class="waterfall-arrow">↓</div>
+              <article class="waterfall-card waterfall-card-strong">
+                <strong>已验证</strong>
+                <p><strong>谁生成：</strong>验证通过后的正式知识条目。</p>
+                <p><strong>谁审核：</strong>最终由审核链路确认生效。</p>
+                <p><strong>如何留痕：</strong>保留版本、生效时间、责任人。</p>
+                <p><strong>进入下一状态：</strong>规则变化或效果退化时转入失效。</p>
+              </article>
+              <div class="waterfall-arrow">↓</div>
+              <article class="waterfall-card">
+                <strong>失效</strong>
+                <p><strong>谁生成：</strong>系统或人工标记失效。</p>
+                <p><strong>谁审核：</strong>规则负责人或专家确认。</p>
+                <p><strong>如何留痕：</strong>保留失效原因、时间和替代版本。</p>
+                <p><strong>进入下一状态：</strong>如重新修订，可回到草稿重新加工。</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="phases" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Phase Delivery</span>
+              <h2>AI 与技术建设的阶段性交付地图</h2>
+            </div>
+            <p>阶段性交付的重点不是一次性把所有系统做全，而是按对象、能力和交付链路逐步搭建。</p>
+          </div>
+
+          <div class="delivery-phase-grid">
+            <article class="delivery-phase panel">
+              <div class="delivery-phase-head"><span class="phase-tag">Phase 1</span><span class="status-tag progress">进行中</span></div>
+              <h3>对象模型与最小底座</h3>
+              <ul>
+                <li>对象模型定义</li>
+                <li>数据边界定义</li>
+                <li>最小数据底座</li>
+                <li>第一版工作台</li>
+              </ul>
+              <p><strong>AI 交付项：</strong>结构化抽取链路验证。</p>
+            </article>
+            <article class="delivery-phase panel">
+              <div class="delivery-phase-head"><span class="phase-tag">Phase 2</span><span class="status-tag todo">待建设</span></div>
+              <h3>历史语料加工与检索初版</h3>
+              <ul>
+                <li>历史语料加工</li>
+                <li>结构化抽取服务</li>
+                <li>知识候选生成</li>
+                <li>向量检索初版</li>
+              </ul>
+              <p><strong>AI 交付项：</strong>文本/图片/视频抽取、批处理加工、相似检索。</p>
+            </article>
+            <article class="delivery-phase panel">
+              <div class="delivery-phase-head"><span class="phase-tag">Phase 3</span><span class="status-tag todo">待建设</span></div>
+              <h3>在线决策与 Agent 编排</h3>
+              <ul>
+                <li>在线决策服务</li>
+                <li>规则引擎</li>
+                <li>Agent 工作流</li>
+                <li>客户端辅助交互</li>
+              </ul>
+              <p><strong>AI 交付项：</strong>在线需求解析、参数建议、风险提示、解释生成。</p>
+            </article>
+            <article class="delivery-phase panel">
+              <div class="delivery-phase-head"><span class="phase-tag">Phase 4</span><span class="status-tag todo">待建设</span></div>
+              <h3>评测、回流与能力固化</h3>
+              <ul>
+                <li>评测体系</li>
+                <li>反馈回流</li>
+                <li>能力固化</li>
+                <li>局部本地化评估</li>
+              </ul>
+              <p><strong>AI 交付项：</strong>高频能力规则化、小模型评估、OCR / ASR / 多模态预处理本地化探索。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="investment" class="section section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Investment Gate</span>
+              <h2>什么时候开始考虑模型、硬件和本地化重投入</h2>
+            </div>
+            <p>当前阶段不建议优先投入自建生成模型；只有当高频任务稳定、成本和延迟问题显著、且团队具备维护能力后，才逐步评估局部模型和算力投入。</p>
+          </div>
+
+          <div class="decision-flow panel">
+            <article class="decision-step">
+              <span class="compare-label">判断一</span>
+              <h3>开始投入生成模型相关学习 / 评估</h3>
+              <ul>
+                <li>已沉淀稳定高频任务</li>
+                <li>已明确值得固化的任务</li>
+                <li>已有可用于蒸馏 / 训练的样本</li>
+              </ul>
+            </article>
+            <div class="decision-arrow">↓</div>
+            <article class="decision-step decision-mid">
+              <span class="compare-label">判断二</span>
+              <h3>开始投入本地推理或专用模型</h3>
+              <ul>
+                <li>延迟要求显著提升</li>
+                <li>高频任务稳定</li>
+                <li>云成本明显上升</li>
+                <li>本地化收益明确</li>
+              </ul>
+            </article>
+            <div class="decision-arrow">↓</div>
+            <article class="decision-step decision-strong">
+              <span class="compare-label">判断三</span>
+              <h3>开始投入硬件 / 显卡</h3>
+              <ul>
+                <li>已过概念验证阶段</li>
+                <li>有固定高频推理任务</li>
+                <li>团队具备维护能力</li>
+                <li>ROI 可以成立</li>
+              </ul>
+              <p><strong>原则：</strong>不是先造大模型，而是先固化高频稳定局部能力。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="resource-map" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Resource Mapping</span>
+              <h2>我们现在有什么，接下来要建设什么</h2>
+            </div>
+            <p>这块用于把现有真实资源、未来待建设能力和一条最小可跑通流转直接对齐，说明我们不是从零开始搭系统。</p>
+          </div>
+
+          <div class="resource-map-grid">
+            <article class="resource-column panel">
+              <h3>已有资源</h3>
+              <ul>
+                <li>口味工程师经验</li>
+                <li>后台数据库</li>
+                <li>菜谱信息</li>
+                <li>客户需求输入</li>
+                <li>录菜过程记录</li>
+                <li>设备执行日志</li>
+                <li>历史交付案例</li>
+              </ul>
+            </article>
+
+            <article class="resource-column panel">
+              <h3>待建设能力</h3>
+              <ul>
+                <li>结构化抽取</li>
+                <li>知识沉淀</li>
+                <li>规则引擎</li>
+                <li>向量检索</li>
+                <li>在线决策服务</li>
+                <li>Agent 编排</li>
+                <li>反馈回流机制</li>
+              </ul>
+            </article>
+
+            <article class="resource-column panel resource-flow-column">
+              <h3>最小可跑通流转</h3>
+              <div class="mini-flow">
+                <div class="mini-flow-step">从数据库取菜谱和历史记录</div>
+                <div class="mini-flow-arrow">↓</div>
+                <div class="mini-flow-step">结合口味工程师经验做结构化抽取</div>
+                <div class="mini-flow-arrow">↓</div>
+                <div class="mini-flow-step">沉淀成知识条目和规则候选</div>
+                <div class="mini-flow-arrow">↓</div>
+                <div class="mini-flow-step">对客户需求做检索与建议</div>
+                <div class="mini-flow-arrow">↓</div>
+                <div class="mini-flow-step">输出给内部人员或设备侧辅助交付</div>
+                <div class="mini-flow-arrow">↓</div>
+                <div class="mini-flow-step">回写本次结果</div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>Cooking LM 技术交付工作台</strong>
+          <p>用于表达从语料加工到系统交付的技术主链、模块清单、对象体系与投入判断。</p>
+        </div>
+      </footer>
+    </div>
+
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

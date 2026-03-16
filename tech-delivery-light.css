@@ -1,0 +1,310 @@
+body.tech-delivery-page {
+  color: #18212b;
+  background: #f5f7fa;
+}
+
+body.tech-delivery-page::before {
+  background-image:
+    linear-gradient(rgba(17, 24, 39, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 24, 39, 0.03) 1px, transparent 1px);
+  mask-image: none;
+  opacity: 0.45;
+}
+
+.tech-delivery-page {
+  --bg-panel: #ffffff;
+  --line: rgba(15, 23, 42, 0.08);
+  --line-strong: rgba(37, 99, 235, 0.22);
+  --text: #18212b;
+  --text-muted: #5f6b7a;
+  --text-soft: #7f8a98;
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --warn: #d97706;
+  --success: #0f766e;
+  --danger: #dc2626;
+  --shadow-panel: 0 10px 24px rgba(15, 23, 42, 0.05);
+  --shadow-glow: 0 0 0 1px rgba(15, 23, 42, 0.04), 0 8px 20px rgba(15, 23, 42, 0.04);
+}
+
+.tech-delivery-page .topbar {
+  border-color: rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.tech-delivery-page .page-switch,
+.tech-delivery-page .nav-link,
+.tech-delivery-page .hero-description,
+.tech-delivery-page .section-heading p,
+.tech-delivery-page .hero-subtitle,
+.tech-delivery-page .module-card p,
+.tech-delivery-page .object-card p,
+.tech-delivery-page .delivery-layer p,
+.tech-delivery-page .delivery-phase p,
+.tech-delivery-page .state-meta-card p,
+.tech-delivery-page .waterfall-card p,
+.tech-delivery-page .judgement-card p,
+.tech-delivery-page .definition-step p,
+.tech-delivery-page .transform-stage ul,
+.tech-delivery-page .delivery-phase ul,
+.tech-delivery-page .hero-focus ul {
+  color: var(--text-muted);
+}
+
+.tech-delivery-page .nav-link:hover,
+.tech-delivery-page .nav-link.active {
+  color: var(--accent-strong);
+  border-color: rgba(37, 99, 235, 0.16);
+  background: rgba(37, 99, 235, 0.06);
+  box-shadow: none;
+}
+
+.tech-delivery-page .section {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+}
+
+.tech-delivery-page .section::after {
+  display: none;
+}
+
+.tech-delivery-page .section-secondary {
+  background: #fafbfd;
+  border-color: rgba(15, 23, 42, 0.05);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.03);
+}
+
+.tech-delivery-page .panel,
+.tech-delivery-page .module-card,
+.tech-delivery-page .object-card,
+.tech-delivery-page .delivery-layer,
+.tech-delivery-page .delivery-phase,
+.tech-delivery-page .state-meta-card,
+.tech-delivery-page .waterfall-card,
+.tech-delivery-page .judgement-card,
+.tech-delivery-page .definition-step,
+.tech-delivery-page .deliverable-cluster,
+.tech-delivery-page .transform-stage,
+.tech-delivery-page .asset-chip {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: none;
+}
+
+.tech-delivery-page .panel:hover,
+.tech-delivery-page .module-card:hover,
+.tech-delivery-page .object-card:hover,
+.tech-delivery-page .delivery-layer:hover,
+.tech-delivery-page .delivery-phase:hover,
+.tech-delivery-page .state-meta-card:hover,
+.tech-delivery-page .waterfall-card:hover,
+.tech-delivery-page .judgement-card:hover,
+.tech-delivery-page .definition-step:hover,
+.tech-delivery-page .deliverable-cluster:hover,
+.tech-delivery-page .transform-stage:hover {
+  transform: translateY(-1px);
+  border-color: rgba(37, 99, 235, 0.18);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.05);
+}
+
+.tech-delivery-page .delivery-definition {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-height: auto;
+}
+
+.tech-delivery-page .definition-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 24px;
+}
+
+.tech-delivery-page .definition-judgements {
+  display: grid;
+  gap: 14px;
+}
+
+.tech-delivery-page .judgement-card {
+  padding: 18px 20px;
+  border-radius: 18px;
+}
+
+.tech-delivery-page .judgement-card strong,
+.tech-delivery-page .definition-step strong,
+.tech-delivery-page .waterfall-card strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tech-delivery-page .section-heading h1 {
+  font-size: clamp(52px, 7vw, 84px);
+}
+
+.tech-delivery-page .judgement-title {
+  font-size: 18px;
+}
+
+.tech-delivery-page .definition-chain {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.tech-delivery-page .definition-step {
+  padding: 18px 16px;
+  border-radius: 18px;
+}
+
+.tech-delivery-page .definition-step-core,
+.tech-delivery-page .transform-stage-accent,
+.tech-delivery-page .key-layer,
+.tech-delivery-page .delivery-phase,
+.tech-delivery-page .status-tag.progress,
+.tech-delivery-page .waterfall-card-strong {
+  background: #f7faff;
+  border-color: rgba(37, 99, 235, 0.18);
+}
+
+.tech-delivery-page .definition-chain-arrow,
+.tech-delivery-page .deliverable-arrow,
+.tech-delivery-page .decision-arrow,
+.tech-delivery-page .waterfall-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 22px;
+}
+
+.tech-delivery-page .decision-step,
+.tech-delivery-page .decision-mid,
+.tech-delivery-page .decision-strong {
+  background: #ffffff;
+}
+
+.tech-delivery-page .decision-mid {
+  background: #f7faff;
+}
+
+.tech-delivery-page .decision-strong {
+  background: #fffaf3;
+  border-color: rgba(217, 119, 6, 0.18);
+}
+
+.tech-delivery-page .deliverable-cluster,
+.tech-delivery-page .module-card,
+.tech-delivery-page .object-card,
+.tech-delivery-page .delivery-phase,
+.tech-delivery-page .state-meta-card,
+.tech-delivery-page .waterfall-card {
+  padding: 20px;
+}
+
+.tech-delivery-page .status-tag {
+  background: #ffffff;
+}
+
+.tech-delivery-page .status-tag.done {
+  color: var(--success);
+  border-color: rgba(15, 118, 110, 0.18);
+}
+
+.tech-delivery-page .status-tag.progress {
+  color: var(--accent);
+}
+
+.tech-delivery-page .status-tag.todo {
+  color: var(--warn);
+  border-color: rgba(217, 119, 6, 0.18);
+  background: #fffaf3;
+}
+
+.tech-delivery-page .waterfall-board {
+  display: block;
+}
+
+.tech-delivery-page .waterfall-flow {
+  display: grid;
+  gap: 10px;
+}
+
+.tech-delivery-page .waterfall-card p {
+  margin: 0 0 8px;
+}
+
+.tech-delivery-page .resource-map-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tech-delivery-page .resource-column {
+  padding: 20px;
+}
+
+.tech-delivery-page .resource-column h3 {
+  margin: 0 0 12px;
+}
+
+.tech-delivery-page .resource-column ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.tech-delivery-page .resource-flow-column {
+  background: #f7faff;
+  border-color: rgba(37, 99, 235, 0.18);
+}
+
+.tech-delivery-page .mini-flow {
+  display: grid;
+  gap: 10px;
+}
+
+.tech-delivery-page .mini-flow-step {
+  padding: 14px 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--text);
+}
+
+.tech-delivery-page .mini-flow-arrow {
+  text-align: center;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.tech-delivery-page .footer {
+  opacity: 0.7;
+}
+
+.tech-delivery-page .back-to-top {
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--text);
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+@media (max-width: 1180px) {
+  .tech-delivery-page .definition-header,
+  .tech-delivery-page .definition-chain,
+  .tech-delivery-page .deliverable-composition {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-delivery-page .deliverable-arrow {
+    transform: rotate(90deg);
+  }
+
+  .tech-delivery-page .resource-map-grid {
+    grid-template-columns: 1fr;
+  }
+}

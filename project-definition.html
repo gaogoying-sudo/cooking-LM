@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking LM / 项目定义与阶段目标</title>
+    <link rel="stylesheet" href="workspace-light.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand">
+            <span class="brand-kicker">Project Definition</span>
+            <span class="brand-title">项目定义与阶段目标</span>
+            <span class="brand-note">讲清楚 CLM 到底在建什么、第一阶段先交付什么、三类场景如何排优先级。</span>
+          </div>
+          <div class="header-actions">
+            <a class="page-switch" href="index.html">返回总控导航台</a>
+            <a class="page-switch" href="technical-main-chain.html">继续看技术主链</a>
+          </div>
+        </div>
+        <div class="page-tabs">
+          <a class="page-tab" href="index.html">总控导航台</a>
+          <a class="page-tab current" href="project-definition.html">项目定义</a>
+          <a class="page-tab" href="technical-main-chain.html">技术总链路</a>
+          <a class="page-tab" href="technical-delivery-workbench.html">技术交付</a>
+          <a class="page-tab" href="knowledge-formation-flow.html">知识形成</a>
+          <a class="page-tab" href="layered-case-matrix.html">案例矩阵</a>
+          <a class="page-tab" href="sample-scenario-loop.html">样板闭环</a>
+          <a class="page-tab" href="progress-and-roadmap.html">进展路线图</a>
+        </div>
+        <nav class="anchor-nav">
+          <a class="nav-link active" href="#definition">定义</a>
+          <a class="nav-link" href="#goal">阶段目标</a>
+          <a class="nav-link" href="#scenes">三类场景</a>
+          <a class="nav-link" href="#phase">Phase 1 策略</a>
+          <a class="nav-link" href="#archive">归档说明</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="definition" class="section section-card section-primary reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Definition</span>
+            <h1>CLM 不是单独模型，也不是单独 Agent</h1>
+            <p class="hero-subtitle">它是一套围绕菜谱、经验、规则、设备和输出执行组织起来的内部智能系统。</p>
+            <p class="hero-description">项目真正要建设的是：把口味工程师现场工作中最核心、最可复用、最贴近真实交付价值的部分，逐步拆成对象、知识、规则、流程与输出能力，而不是把“大模型会不会说”当成项目主体。</p>
+          </div>
+          <div class="three-column" style="margin-top: 20px;">
+            <article class="card">
+              <span class="status-tag">不是</span>
+              <h3>不是单独模型项目</h3>
+              <p>模型只是系统中的局部能力，不是数据库、规则库和流程引擎的替代品。</p>
+            </article>
+            <article class="card">
+              <span class="status-tag">不是</span>
+              <h3>不是先做一个会说话的 Agent</h3>
+              <p>Agent 可以串联能力，但如果没有对象、知识与规则底座，只会变成入口层包装。</p>
+            </article>
+            <article class="card">
+              <span class="status-tag">是</span>
+              <h3>是一套可持续建设的交付系统</h3>
+              <p>先围绕高频任务跑通最小闭环，再把素材逐步加工成知识资产和输出能力。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="goal" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Phase Goal</span>
+              <h2>第一阶段核心目标</h2>
+            </div>
+            <p>第一阶段不是追求一上来满分，而是让系统在真实约束下交付一个可用首版。</p>
+          </div>
+          <div class="summary-banner">
+            <strong>客户在口味工程师不到场的情况下，先起出 60–70 分首版菜谱。</strong>
+            <p>这意味着系统首先要承接的是“首版可起出、可试做、可反馈、可继续优化”的能力，而不是直接把所有菜一次性做到稳定高分。第一阶段更偏迁移和辅助交付，不是全面替代经验本身。</p>
+          </div>
+        </section>
+
+        <section id="scenes" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Three Scenes</span>
+              <h2>三类核心场景</h2>
+            </div>
+            <p>三类场景都重要，但不能同优先级并行推进。</p>
+          </div>
+          <div class="three-column">
+            <article class="card">
+              <span class="status-tag">场景 1</span>
+              <h3>客户已有菜，目标是迁移复刻</h3>
+              <p>最接近真实交付，已有目标菜、已有人工经验、已有设备执行约束，是最适合作为 Phase 1 主样板的场景。</p>
+              <ul>
+                <li>目标清楚</li>
+                <li>知识可积累</li>
+                <li>反馈闭环最短</li>
+              </ul>
+            </article>
+            <article class="card">
+              <span class="status-tag">场景 2</span>
+              <h3>客户没有现成菜谱，但市场上存在类似菜</h3>
+              <p>系统可以依托相似案例、外部资料和已有知识做参考收敛，但这个阶段更适合预埋能力而不是承诺稳定主交付。</p>
+              <ul>
+                <li>要预埋相似检索能力</li>
+                <li>要预埋弱建议与补问机制</li>
+                <li>不宜直接承诺强输出</li>
+              </ul>
+            </article>
+            <article class="card">
+              <span class="status-tag">场景 3</span>
+              <h3>创意菜 / 新菜 / 数据库里没有参考</h3>
+              <p>这是未来重要能力方向，但不是当前阶段的主要交付目标，否则会把项目过早拉向开放式生成与高不确定性场景。</p>
+              <ul>
+                <li>目前不作为主交付目标</li>
+                <li>只保留长期方向说明</li>
+                <li>避免稀释当前资源</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="phase" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Phase 1 Strategy</span>
+              <h2>Phase 1 主攻策略</h2>
+            </div>
+            <p>当前建议：主攻场景 1，兼顾场景 2 的能力预埋，不把场景 3 作为第一阶段主要交付目标。</p>
+          </div>
+          <div class="detail-grid">
+            <div class="detail-box">
+              <strong>主攻</strong>
+              <span>已有菜迁移复刻，围绕“首版起出、试做反馈、继续修正”跑通最小闭环。</span>
+            </div>
+            <div class="detail-box">
+              <strong>兼顾</strong>
+              <span>预埋相似菜检索、弱建议、补问与转人工能力，为场景 2 提前铺底。</span>
+            </div>
+            <div class="detail-box">
+              <strong>暂缓</strong>
+              <span>不把创意菜 / 新菜作为当前主要承诺对象，避免模型能力叙事反客为主。</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="archive" class="section section-card section-secondary reveal archive-box">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Archive Note</span>
+              <h2>旧表达如何保留</h2>
+            </div>
+            <p>旧版总览和早期架构表达继续保留，但当前页以最新版本理解为主叙事。</p>
+          </div>
+          <details>
+            <summary>展开查看相关归档入口</summary>
+            <div class="card-grid" style="margin-top: 14px;">
+              <article class="archive-card">
+                <h3><a href="overview-archive.html">原全景建设工作台</a></h3>
+                <p>保留早期项目定义与大图表达。</p>
+              </article>
+              <article class="archive-card">
+                <h3><a href="tech-delivery.html">旧技术交付工作台</a></h3>
+                <p>保留之前的技术交付说明方式，作为辅助材料。</p>
+              </article>
+            </div>
+          </details>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <strong>项目定义与阶段目标页</strong>
+        <p>这一页用于统一“当前在建什么、先做什么、不先做什么”的共识，再进入后续技术板块。</p>
+      </footer>
+    </div>
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>
