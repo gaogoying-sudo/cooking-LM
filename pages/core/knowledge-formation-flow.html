@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking LM / 知识形成链路</title>
+    <link rel="stylesheet" href="workspace-light.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand">
+            <span class="brand-kicker">Knowledge Formation Flow</span>
+            <span class="brand-title">知识形成链路页</span>
+            <span class="brand-note">专门讲前三层：原始数据接入层、结构化加工层、知识沉淀层。</span>
+          </div>
+          <div class="header-actions">
+            <a class="page-switch" href="index.html">返回总控导航台</a>
+            <a class="page-switch" href="tech-layered-knowledge-matrix.html">查看旧整合页</a>
+          </div>
+        </div>
+        <div class="page-tabs">
+          <a class="page-tab" href="index.html">总控导航台</a>
+          <a class="page-tab" href="project-definition.html">项目定义</a>
+          <a class="page-tab" href="technical-main-chain.html">技术总链路</a>
+          <a class="page-tab" href="technical-delivery-workbench.html">技术交付</a>
+          <a class="page-tab current" href="knowledge-formation-flow.html">知识形成</a>
+          <a class="page-tab" href="layered-case-matrix.html">案例矩阵</a>
+          <a class="page-tab" href="sample-scenario-loop.html">样板闭环</a>
+          <a class="page-tab" href="progress-and-roadmap.html">进展路线图</a>
+        </div>
+        <nav class="anchor-nav">
+          <a class="nav-link active" href="#principles">原则</a>
+          <a class="nav-link" href="#inputs">输入源池</a>
+          <a class="nav-link" href="#layers">前三层</a>
+          <a class="nav-link" href="#objects">对象体系</a>
+          <a class="nav-link" href="#knowledge">知识产物</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="principles" class="section section-card section-primary reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Principles</span>
+            <h1>原始素材不是直接知识</h1>
+            <p class="hero-subtitle">先把素材接进来，再映射成对象，再从对象中沉淀出可复用知识。</p>
+            <p class="hero-description">前三层解决的是“知识从哪里来、如何进入统一体系、什么内容能真正成为可复用知识”。这里的核心不是全量世界建模，而是围绕任务驱动、最小闭环、高频优先持续建设。</p>
+          </div>
+          <div class="three-column" style="margin-top: 20px;">
+            <article class="card"><h3>不按全量世界建模做</h3><p>先锁对象主干和任务边界，再按高频任务逐步填知识。</p></article>
+            <article class="card"><h3>先建对象层，再建知识类型层</h3><p>先解决“挂到哪里”，再解决“归纳成什么知识”。</p></article>
+            <article class="card"><h3>AI 生成候选，不等于有效知识</h3><p>候选必须进入验证、状态管理和版本留痕链路。</p></article>
+          </div>
+        </section>
+
+        <section id="inputs" class="section section-card section-primary reveal archive-box">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Input Sources</span>
+              <h2>输入源池</h2>
+            </div>
+            <p>不是“什么都抓”，而是把未来可能有价值的原始证据与素材以可追踪、可登记、可关联的方式接入系统。</p>
+          </div>
+          <div class="card-grid">
+            <details class="archive-card"><summary>内部结构化业务数据</summary><p>后台数据库、菜谱表、参数记录、设备日志、客户需求记录、录菜结果记录。</p></details>
+            <details class="archive-card"><summary>内部非结构化过程素材</summary><p>录菜视频、操作录屏、交付纪要、现场照片、聊天记录、会议录音。</p></details>
+            <details class="archive-card"><summary>专家经验输入</summary><p>口味工程师访谈、技法讲解、调参原因说明、失败经验复盘、经验总结文档。</p></details>
+            <details class="archive-card"><summary>外部公开参考资料</summary><p>小红书、博客文章、菜谱分享、评论区讨论、海外公开资料、教材书籍。</p></details>
+            <details class="archive-card"><summary>未来设备与传感数据</summary><p>温度轨迹、投料记录、运动曲线、称重变化、摄像头采集、执行状态数据。</p></details>
+          </div>
+        </section>
+
+        <section id="layers" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Three Layers</span>
+              <h2>前三层如何逐步形成知识</h2>
+            </div>
+            <p>每一层都不是装饰名词，而是在解决不同问题。</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-step">
+              <strong>原始数据接入层</strong>
+              <p>把内部业务数据、外部参考资料、专家经验、现场记录等原始素材，以可追踪、可登记、可关联的方式接入系统，形成原材料池。</p>
+              <ul>
+                <li>典型动作：数据接入、素材上传、来源登记、时间戳记录、权限分类、原始证据归档</li>
+                <li>典型输出：原始素材池、原始证据池、已登记数据源、待解析素材队列</li>
+              </ul>
+            </div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step">
+              <strong>结构化加工层</strong>
+              <p>把不同来源、不同模态、不同粒度的原始素材，解析并映射为统一对象体系下的字段、标签、关系、时间线和证据链接。</p>
+              <ul>
+                <li>典型动作：文本字段抽取、音频转写、视频切片、步骤识别、参数识别、调整动作抽取、证据链接挂载、对象映射</li>
+                <li>典型输出：结构化记录、对象挂载结果、标签、时间线、待沉淀候选</li>
+              </ul>
+            </div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step">
+              <strong>知识沉淀层</strong>
+              <p>从结构化数据中筛选、归纳、验证出可复用、可解释、可决策的经验、规则、模式和模板，并通过状态管理逐步沉淀为有效知识资产。</p>
+              <ul>
+                <li>典型动作：相似记录聚合、规律归纳、候选规则生成、经验条目提炼、参数依赖识别、失败模式聚类、风险映射、验证状态管理</li>
+                <li>典型输出：经验规则、放量规则、调参原因模板、失败模式、风险策略、设备适配知识、标杆菜谱</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="objects" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Unified Object Layer</span>
+              <h2>统一对象体系</h2>
+            </div>
+            <p>不同输入源最终都要挂到这些对象上，否则就无法持续沉淀。</p>
+          </div>
+          <div class="card-grid">
+            <article class="object-card"><h3>菜品</h3><p>是所有版本、风味和目标关系的主对象。</p></article>
+            <article class="object-card"><h3>菜谱版本</h3><p>承接具体版本、参数包和适配记录。</p></article>
+            <article class="object-card"><h3>工艺步骤</h3><p>承接动作序列和阶段变化。</p></article>
+            <article class="object-card"><h3>参数项</h3><p>承接时长、火力、速度、投料等具体变量。</p></article>
+            <article class="object-card"><h3>调整动作 / 调整原因</h3><p>明确“怎么改”和“为什么改”。</p></article>
+            <article class="object-card"><h3>风险标签 / 证据对象</h3><p>承接失败模式、风险来源与原始证据链接。</p></article>
+          </div>
+        </section>
+
+        <section id="knowledge" class="section section-card section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Knowledge Output</span>
+              <h2>知识产物与状态管理</h2>
+            </div>
+            <p>知识不是抽出来就算完成，而是要进入状态流转与验证管理。</p>
+          </div>
+          <div class="two-column">
+            <div class="card-grid">
+              <article class="card"><h3>知识类型</h3><p>经验规则、放量规则、调参原因模板、失败模式、风险策略、技法模板、参数依赖关系、设备适配知识、标杆菜谱。</p></article>
+              <article class="card"><h3>任务驱动填充</h3><p>围绕高频任务逐步填知识，而不是一开始追求建完整烹饪知识世界。</p></article>
+            </div>
+            <div class="timeline">
+              <div class="timeline-step"><strong>草稿</strong><p>原始整理结果</p></div>
+              <div class="timeline-arrow">↓</div>
+              <div class="timeline-step"><strong>候选</strong><p>AI 或人工归纳出的可疑似知识</p></div>
+              <div class="timeline-arrow">↓</div>
+              <div class="timeline-step"><strong>待验证</strong><p>进入验证流程</p></div>
+              <div class="timeline-arrow">↓</div>
+              <div class="timeline-step"><strong>已验证</strong><p>进入可复用知识池</p></div>
+              <div class="timeline-arrow">↓</div>
+              <div class="timeline-step"><strong>失效</strong><p>被替换或不再适用</p></div>
+            </div>
+          </div>
+          <details style="margin-top: 16px;">
+            <summary>展开查看旧整合页归档入口</summary>
+            <div class="card-grid" style="margin-top: 14px;">
+              <article class="archive-card">
+                <h3><a href="tech-layered-knowledge-matrix.html">旧知识形成案例矩阵页</a></h3>
+                <p>保留之前把前三层和后三层合在一页时的表达。</p>
+              </article>
+            </div>
+          </details>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <strong>知识形成链路页</strong>
+        <p>当前页专门承接前三层，让知识形成过程从“概念说明”变成“可建设对象”。</p>
+      </footer>
+    </div>
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>

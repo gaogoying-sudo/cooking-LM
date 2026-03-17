@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking LM / 技术分层案例矩阵</title>
+    <link rel="stylesheet" href="workspace-light.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand">
+            <span class="brand-kicker">Layered Case Matrix</span>
+            <span class="brand-title">技术分层案例矩阵页</span>
+            <span class="brand-note">专门讲后三层：检索层、规则与策略层、模型推理层在不同数据状态下如何工作。</span>
+          </div>
+          <div class="header-actions">
+            <a class="page-switch" href="index.html">返回总控导航台</a>
+            <a class="page-switch" href="tech-case-matrix.html">查看旧案例矩阵页</a>
+          </div>
+        </div>
+        <div class="page-tabs">
+          <a class="page-tab" href="index.html">总控导航台</a>
+          <a class="page-tab" href="project-definition.html">项目定义</a>
+          <a class="page-tab" href="technical-main-chain.html">技术总链路</a>
+          <a class="page-tab" href="technical-delivery-workbench.html">技术交付</a>
+          <a class="page-tab" href="knowledge-formation-flow.html">知识形成</a>
+          <a class="page-tab current" href="layered-case-matrix.html">案例矩阵</a>
+          <a class="page-tab" href="sample-scenario-loop.html">样板闭环</a>
+          <a class="page-tab" href="progress-and-roadmap.html">进展路线图</a>
+        </div>
+        <nav class="anchor-nav">
+          <a class="nav-link active" href="#roles">三层分工</a>
+          <a class="nav-link" href="#scenes">场景切换</a>
+          <a class="nav-link" href="#waterfall">案例瀑布流</a>
+          <a class="nav-link" href="#matrix">输出能力矩阵</a>
+          <a class="nav-link" href="#failure">正确失败</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="roles" class="section section-card section-primary reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Three Decision Layers</span>
+            <h1>检索层负责找，规则与策略层负责裁，模型推理层负责想</h1>
+            <p class="hero-description">这一页只讲后三层在不同数据状态下如何工作。固定示例需求是“我要一个北京口味的宫保鸡丁”，重点回答：输入模糊时为什么系统还能逐层缩圈，数据弱时为什么系统不该装作知道答案。</p>
+          </div>
+          <div class="three-column" style="margin-top: 20px;">
+            <article class="role-card"><h3>检索层</h3><p>负责找相关上下文：候选菜谱、案例、规则、知识条目与相似经验。</p></article>
+            <article class="role-card"><h3>规则与策略层</h3><p>负责裁边界与流程：过滤、约束、风险控制、审核要求与流程收口。</p></article>
+            <article class="role-card"><h3>模型推理层</h3><p>负责想怎么理解与建议：在允许边界内做理解、比较、排序、解释与建议生成。</p></article>
+          </div>
+        </section>
+
+        <section id="scenes" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Scenario Switch</span>
+              <h2>五个数据状态场景</h2>
+            </div>
+            <p>切换场景后，瀑布流和输出能力矩阵会同步变化。</p>
+          </div>
+          <div id="scenarioTabs" class="scenario-tabs"></div>
+        </section>
+
+        <section id="waterfall" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Case Waterfall</span>
+              <h2>固定示例需求：我要一个北京口味的宫保鸡丁</h2>
+            </div>
+            <p>这里重点看后三层，但也会显示前三层成熟度如何影响最终输出强度。</p>
+          </div>
+          <div id="scenarioSummary" class="summary-banner" style="margin-bottom: 16px;"></div>
+          <div id="waterfallBoard" class="waterfall panel"></div>
+        </section>
+
+        <section id="matrix" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Capability Matrix</span>
+              <h2>输出能力矩阵</h2>
+            </div>
+            <p>同一套框架，不同数据状态下，系统能输出到什么程度完全不同。</p>
+          </div>
+          <div id="matrixBoard" class="matrix-table panel"></div>
+        </section>
+
+        <section id="failure" class="section section-card section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Correct Failure</span>
+              <h2>没有知识时，系统应正确失败</h2>
+            </div>
+            <p>成熟系统不仅要会“有答案时给答案”，还要会“没答案时正确失败”。</p>
+          </div>
+          <div id="failureBoard" class="four-column"></div>
+          <details style="margin-top: 16px;">
+            <summary>展开查看旧矩阵页归档入口</summary>
+            <div class="card-grid" style="margin-top: 14px;">
+              <article class="archive-card">
+                <h3><a href="tech-case-matrix.html">旧技术分层案例矩阵页</a></h3>
+                <p>保留此前只讲后三层的旧版页面。</p>
+              </article>
+              <article class="archive-card">
+                <h3><a href="tech-layered-knowledge-matrix.html">旧整合版知识形成矩阵页</a></h3>
+                <p>保留此前把前三层与后三层放在同一页时的工作版本。</p>
+              </article>
+            </div>
+          </details>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <strong>技术分层案例矩阵页</strong>
+        <p>当前页专门承接后三层的职责区分、数据状态变化和正确失败机制。</p>
+      </footer>
+    </div>
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="script.js"></script>
+    <script src="layered-case-matrix.js"></script>
+  </body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking LM / 技术分层与知识形成案例矩阵工作台</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="tech-layered-knowledge-matrix.css" />
+  </head>
+  <body class="layered-knowledge-page">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-kicker">Layered Knowledge Matrix Workspace</span>
+          <span class="brand-title">技术分层与知识形成案例矩阵</span>
+          <a href="index.html" class="page-switch">返回 CLM 总控导航台</a>
+          <a href="knowledge-formation-flow.html" class="page-switch">查看新版知识形成页</a>
+          <a href="layered-case-matrix.html" class="page-switch">查看新版案例矩阵页</a>
+        </div>
+        <nav class="topnav" aria-label="页面导航">
+          <a href="#definition" class="nav-link active">定义</a>
+          <a href="#overview" class="nav-link">总览</a>
+          <a href="#knowledge" class="nav-link">知识形成</a>
+          <a href="#roles" class="nav-link">三层分工</a>
+          <a href="#scenarios" class="nav-link">场景切换</a>
+          <a href="#waterfall" class="nav-link">主瀑布流</a>
+          <a href="#matrix" class="nav-link">能力矩阵</a>
+          <a href="#failure" class="nav-link">正确失败</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="definition" class="section section-primary reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Definition</span>
+            <h1>技术分层与知识形成案例矩阵</h1>
+            <p class="hero-subtitle">Cooking LM Layered Flow Under Different Data Conditions</p>
+            <p class="hero-description">
+              从原始素材进入系统，到结构化加工、知识沉淀，再到检索、规则与模型推理，展示同一套技术体系在不同数据状态下如何工作，以及最终能输出什么程度的结果。
+            </p>
+          </div>
+
+          <div class="definition-rail">
+            <div class="definition-rail-item"><strong>原始数据接入层</strong><span>负责把素材接进来</span></div>
+            <div class="definition-rail-arrow">→</div>
+            <div class="definition-rail-item"><strong>结构化加工层</strong><span>负责把素材映射进统一对象体系</span></div>
+            <div class="definition-rail-arrow">→</div>
+            <div class="definition-rail-item"><strong>知识沉淀层</strong><span>负责把可复用经验提炼成知识资产</span></div>
+            <div class="definition-rail-arrow">→</div>
+            <div class="definition-rail-item"><strong>检索层</strong><span>负责找</span></div>
+            <div class="definition-rail-arrow">→</div>
+            <div class="definition-rail-item"><strong>规则与策略层</strong><span>负责裁</span></div>
+            <div class="definition-rail-arrow">→</div>
+            <div class="definition-rail-item"><strong>模型推理层</strong><span>负责想</span></div>
+          </div>
+
+          <div class="hero-statement panel">
+            <p>系统不是只有“有答案”和“没答案”两种状态。同一需求在不同知识资产强度下，会触发不同深度的处理链路，并输出不同强度的结果。</p>
+          </div>
+        </section>
+
+        <section id="overview" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Full Chain</span>
+              <h2>全链路总览区</h2>
+            </div>
+            <p>以下总链路锁定了本页范围：从原始数据进入系统，到知识形成，再到不同数据状态下的决策与输出。</p>
+          </div>
+
+          <div id="fullChain" class="full-chain panel"></div>
+          <div id="chainDetail" class="chain-detail panel"></div>
+        </section>
+
+        <section id="knowledge" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Knowledge Formation</span>
+              <h2>前三层知识形成区</h2>
+            </div>
+            <p>原始素材不是直接知识，必须先经过接入、结构化和沉淀，才能逐步进入可检索、可验证、可复用的知识体系。</p>
+          </div>
+
+          <div class="knowledge-layout">
+            <aside class="source-pool panel">
+              <div class="subsection-title">输入源池</div>
+              <div id="sourcePool" class="source-groups"></div>
+            </aside>
+
+            <div class="formation-core">
+              <div id="formationLayers" class="formation-layers"></div>
+            </div>
+
+            <aside class="knowledge-output panel">
+              <div class="subsection-title">知识 / 对象结果池</div>
+              <div id="knowledgeProducts" class="knowledge-products"></div>
+            </aside>
+          </div>
+
+          <div class="knowledge-status panel">
+            <div class="subsection-title">知识状态流转</div>
+            <div class="knowledge-status-line">
+              <div class="knowledge-state">草稿</div>
+              <div class="definition-rail-arrow">→</div>
+              <div class="knowledge-state">候选</div>
+              <div class="definition-rail-arrow">→</div>
+              <div class="knowledge-state">待验证</div>
+              <div class="definition-rail-arrow">→</div>
+              <div class="knowledge-state knowledge-state-strong">已验证</div>
+              <div class="definition-rail-arrow">→</div>
+              <div class="knowledge-state">失效</div>
+            </div>
+            <p>AI 生成候选，不等于直接成为有效知识。</p>
+          </div>
+        </section>
+
+        <section id="roles" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Decision Roles</span>
+              <h2>三层决策分工区</h2>
+            </div>
+            <p>检索层负责找全相关上下文，规则与策略层负责做边界过滤和流程收口，模型推理层负责在允许范围内做理解、排序、解释与建议生成。</p>
+          </div>
+
+          <div class="decision-role-grid">
+            <article class="decision-role-card panel">
+              <span class="role-kicker">检索层</span>
+              <h3>找相关上下文</h3>
+              <p>负责从数据库、知识库、向量检索库中召回与当前任务最相关的菜谱、案例、规则与相似经验。</p>
+              <ul>
+                <li>输入：用户需求、结构化任务、当前上下文、查询条件</li>
+                <li>输出：候选菜谱集合、候选案例集合、候选规则集合、命中来源</li>
+                <li>关键词：召回、相似搜索、精确查找、候选集合</li>
+              </ul>
+            </article>
+
+            <article class="decision-role-card panel">
+              <span class="role-kicker">规则与策略层</span>
+              <h3>裁边界与流程</h3>
+              <p>负责根据设备、权限、知识状态、风险等级与任务类型，对候选内容进行过滤、收口和流程控制。</p>
+              <ul>
+                <li>输入：检索结果、设备上下文、用户角色、知识状态、风险等级</li>
+                <li>输出：可进入下一步的候选范围、过滤原因、建议等级、审核要求</li>
+                <li>关键词：过滤、约束、边界、风险控制、流程收口</li>
+              </ul>
+            </article>
+
+            <article class="decision-role-card panel">
+              <span class="role-kicker">模型推理层</span>
+              <h3>想怎么理解与建议</h3>
+              <p>负责在规则允许边界内，对小范围上下文做语义理解、比较、补全、排序、解释与建议生成。</p>
+              <ul>
+                <li>输入：规则筛后的少量候选、当前需求描述、任务目标、业务约束</li>
+                <li>输出：排序建议、推荐理由、参数建议、风险说明、缺失信息提示</li>
+                <li>关键词：理解、比较、排序、解释、建议生成、缺口识别</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="scenarios" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Scenario Switch</span>
+              <h2>场景切换区</h2>
+            </div>
+            <p>切换不同数据状态与输入清晰度后，下方主瀑布流和能力矩阵会同步变化，展示同一问题在不同知识资产强度下的行为差异。</p>
+          </div>
+
+          <div id="scenarioTabs" class="scenario-tabs"></div>
+        </section>
+
+        <section id="waterfall" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Case Waterfall</span>
+              <h2>主瀑布流案例区</h2>
+            </div>
+            <p>固定案例使用“我要一个北京口味的宫保鸡丁”，通过 9 个节点展示从原始输入到后续动作的全链路变化。</p>
+          </div>
+
+          <div class="waterfall-header panel">
+            <div>
+              <span class="node-label">固定示例需求</span>
+              <h3>“我要一个北京口味的宫保鸡丁”</h3>
+            </div>
+            <div id="scenarioSummary" class="scenario-summary"></div>
+          </div>
+
+          <div id="caseWaterfall" class="case-waterfall panel"></div>
+        </section>
+
+        <section id="matrix" class="section section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Capability Matrix</span>
+              <h2>输出能力矩阵区</h2>
+            </div>
+            <p>矩阵同时展示前三层成熟度和后三层输出能力，帮助快速判断在不同数据状态下系统究竟能输出到什么程度。</p>
+          </div>
+
+          <div class="matrix-board panel">
+            <div id="capabilityMatrix" class="capability-matrix"></div>
+          </div>
+        </section>
+
+        <section id="failure" class="section section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Correct Failure</span>
+              <h2>系统在“知识不足”时如何正确工作</h2>
+            </div>
+            <p>成熟系统不仅要会“有答案时给答案”，还要会“没答案时正确失败”。当前场景下的弱结果处理方式会同步显示在分流图中。</p>
+          </div>
+
+          <div id="failureFlow" class="failure-flow panel"></div>
+          <div class="summary-banner panel failure-summary">
+            <p>
+              原始数据接入层解决的是素材从哪里来，结构化加工层解决的是素材如何进入统一对象体系，知识沉淀层解决的是哪些结构化信息能够被验证为可复用知识。检索层负责尽量找全相关上下文，规则与策略层负责在系统边界内做过滤和收口，模型推理层负责在允许范围内做理解、排序、解释与建议生成。
+            </p>
+            <p>框架决定系统能不能持续建设，数据和知识决定系统当前能走到多深。</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>Cooking LM / 技术分层与知识形成案例矩阵工作台</strong>
+          <p>用于说明原始素材如何形成知识，以及在不同数据状态下同一套分层系统如何给出不同强度的输出。</p>
+        </div>
+      </footer>
+    </div>
+
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+
+    <script src="script.js"></script>
+    <script src="tech-layered-knowledge-matrix.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking LM / 技术总链路</title>
+    <link rel="stylesheet" href="workspace-light.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand">
+            <span class="brand-kicker">Main Technical Chain</span>
+            <span class="brand-title">技术总链路页</span>
+            <span class="brand-note">只讲 7 层主链，不塞过多案例细节。</span>
+          </div>
+          <div class="header-actions">
+            <a class="page-switch" href="index.html">返回总控导航台</a>
+            <a class="page-switch" href="technical-delivery-workbench.html">继续看技术交付</a>
+          </div>
+        </div>
+        <div class="page-tabs">
+          <a class="page-tab" href="index.html">总控导航台</a>
+          <a class="page-tab" href="project-definition.html">项目定义</a>
+          <a class="page-tab current" href="technical-main-chain.html">技术总链路</a>
+          <a class="page-tab" href="technical-delivery-workbench.html">技术交付</a>
+          <a class="page-tab" href="knowledge-formation-flow.html">知识形成</a>
+          <a class="page-tab" href="layered-case-matrix.html">案例矩阵</a>
+          <a class="page-tab" href="sample-scenario-loop.html">样板闭环</a>
+          <a class="page-tab" href="progress-and-roadmap.html">进展路线图</a>
+        </div>
+        <nav class="anchor-nav">
+          <a class="nav-link active" href="#chain">主链</a>
+          <a class="nav-link" href="#detail">层职责</a>
+          <a class="nav-link" href="#bridges">分板对应</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="chain" class="section section-card section-primary reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Main Chain</span>
+            <h1>原始数据接入层 → 输出执行层</h1>
+            <p class="hero-subtitle">这不是实现顺序的唯一表达，而是当前系统最清晰的主讲法。</p>
+          </div>
+          <div id="chainBoard" class="panel"></div>
+        </section>
+
+        <section id="detail" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Layer Detail</span>
+              <h2>每层一句核心职责</h2>
+            </div>
+            <p>点击链路节点后，下方会切换对应层的职责、输入、输出和为什么它不等于相邻层。</p>
+          </div>
+          <div id="chainDetail" class="summary-banner"></div>
+        </section>
+
+        <section id="bridges" class="section section-card section-secondary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Board Mapping</span>
+              <h2>这条主链分别在哪些分板展开</h2>
+            </div>
+            <p>主链页只锁结构，真正展开分别落到知识形成、案例矩阵和技术交付等页面。</p>
+          </div>
+          <div class="three-column">
+            <article class="card">
+              <h3>前三层</h3>
+              <p>在 <a class="mini-link-inline" href="knowledge-formation-flow.html">知识形成链路页</a> 展开。</p>
+            </article>
+            <article class="card">
+              <h3>后三层</h3>
+              <p>在 <a class="mini-link-inline" href="layered-case-matrix.html">技术分层案例矩阵页</a> 展开。</p>
+            </article>
+            <article class="card">
+              <h3>全链路落地</h3>
+              <p>在 <a class="mini-link-inline" href="sample-scenario-loop.html">样板场景闭环页</a> 看一条真实任务如何跑通。</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <strong>技术总链路页</strong>
+        <p>当前页只负责把主链说清楚，细节交给对应分板。</p>
+      </footer>
+    </div>
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="script.js"></script>
+    <script src="technical-main-chain.js"></script>
+  </body>
+</html>

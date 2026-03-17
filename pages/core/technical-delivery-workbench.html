@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking LM / 技术交付工作台</title>
+    <link rel="stylesheet" href="workspace-light.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand">
+            <span class="brand-kicker">Technical Delivery Workbench</span>
+            <span class="brand-title">技术交付工作台页</span>
+            <span class="brand-note">回答“最终交付物到底是什么”，并把技术架构、模块、对象、状态与投入边界串起来。</span>
+          </div>
+          <div class="header-actions">
+            <a class="page-switch" href="index.html">返回总控导航台</a>
+            <a class="page-switch" href="tech-delivery.html">查看旧交付原型</a>
+          </div>
+        </div>
+        <div class="page-tabs">
+          <a class="page-tab" href="index.html">总控导航台</a>
+          <a class="page-tab" href="project-definition.html">项目定义</a>
+          <a class="page-tab" href="technical-main-chain.html">技术总链路</a>
+          <a class="page-tab current" href="technical-delivery-workbench.html">技术交付</a>
+          <a class="page-tab" href="knowledge-formation-flow.html">知识形成</a>
+          <a class="page-tab" href="layered-case-matrix.html">案例矩阵</a>
+          <a class="page-tab" href="sample-scenario-loop.html">样板闭环</a>
+          <a class="page-tab" href="progress-and-roadmap.html">进展路线图</a>
+        </div>
+        <nav class="anchor-nav">
+          <a class="nav-link active" href="#definition">定义</a>
+          <a class="nav-link" href="#delivery">最终交付物</a>
+          <a class="nav-link" href="#architecture">八层架构</a>
+          <a class="nav-link" href="#modules">技术模块</a>
+          <a class="nav-link" href="#objects">对象与状态</a>
+          <a class="nav-link" href="#phases">阶段交付</a>
+          <a class="nav-link" href="#investment">投入判断</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="definition" class="section section-card section-primary reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Definition</span>
+            <h1>最终交付物不是单独模型，也不是单独 Agent</h1>
+            <p class="hero-subtitle">最终交付物是一套以公司私有语料为原材料，通过结构化抽取、知识沉淀、检索、规则、模型推理和 Agent 编排构成的内部智能系统。</p>
+            <p class="hero-description">这一页优先承接之前的“技术交付工作台”内容，但按新主叙事重组展示：先定义最终交付系统，再看八层架构、十大技术模块、核心对象、知识状态流转、阶段性交付地图以及模型 / 本地化 / 显卡投入边界。</p>
+          </div>
+        </section>
+
+        <section id="delivery" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Delivery System</span>
+              <h2>最终交付系统由哪些部分组成</h2>
+            </div>
+            <p>数据库负责存，模型负责理解和推理，Agent 负责把多个能力串起来完成任务，真正交付的是系统而不是单点对象。</p>
+          </div>
+          <div class="card-grid">
+            <article class="module-card"><h3>数据库</h3><p>负责存放主数据、版本和业务状态。</p></article>
+            <article class="module-card"><h3>素材库</h3><p>负责沉淀视频、纪要、图片、日志等原始证据。</p></article>
+            <article class="module-card"><h3>知识库</h3><p>负责存放规则、模板、失败模式和标杆菜谱。</p></article>
+            <article class="module-card"><h3>向量检索库</h3><p>负责相似召回和弱匹配场景支撑。</p></article>
+            <article class="module-card"><h3>模型服务</h3><p>负责局部理解、比较、排序、解释与建议生成。</p></article>
+            <article class="module-card"><h3>Agent 工作流</h3><p>负责把检索、规则、模型和输出动作串起来。</p></article>
+            <article class="module-card"><h3>规则引擎</h3><p>负责风险控制、流程收口、人工确认与下发边界。</p></article>
+            <article class="module-card"><h3>前端工作台</h3><p>负责承载审核、补问、解释和交付协同。</p></article>
+            <article class="module-card"><h3>设备结构化输出</h3><p>负责把建议结果转成设备侧可执行的数据格式。</p></article>
+          </div>
+        </section>
+
+        <section id="architecture" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Eight Layers</span>
+              <h2>八层技术架构</h2>
+            </div>
+            <p>八层是交付角度的结构视图，不是单纯技术栈分层。</p>
+          </div>
+          <div class="timeline">
+            <div class="timeline-step"><strong>1. 原始数据接入层</strong><p>把数据库、素材、日志、专家经验和外部参考资料接进系统。</p></div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step"><strong>2. 结构化加工层</strong><p>把不同模态内容映射进统一对象体系。</p></div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step"><strong>3. 知识沉淀层</strong><p>把可复用经验提炼成规则、模式、模板和标杆菜谱。</p></div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step"><strong>4. 检索层</strong><p>从数据库、知识库和向量检索库找相关上下文。</p></div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step"><strong>5. 规则与策略层</strong><p>根据设备、风险、状态和权限做边界控制。</p></div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step"><strong>6. 模型推理层</strong><p>在允许范围内做理解、排序、解释与建议生成。</p></div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step"><strong>7. Agent 工作流层</strong><p>把多能力编排成完整任务链路。</p></div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step"><strong>8. 输出执行层</strong><p>把结果送到工作台、审核链路和设备执行侧。</p></div>
+          </div>
+        </section>
+
+        <section id="modules" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Ten Modules</span>
+              <h2>十大技术模块</h2>
+            </div>
+            <p>模块清单用来回答“完整交付到底要建哪些东西”。</p>
+          </div>
+          <div class="card-grid">
+            <article class="module-card"><h3>数据底座开发</h3><p>建立主数据、版本和关系主干。</p></article>
+            <article class="module-card"><h3>数据接入与预处理</h3><p>负责接收原始素材并做基础清洗。</p></article>
+            <article class="module-card"><h3>AI 结构化抽取服务</h3><p>负责从文本、图片、视频、音频中抽取对象与标签。</p></article>
+            <article class="module-card"><h3>知识沉淀与审核模块</h3><p>负责候选知识生成、验证和版本留痕。</p></article>
+            <article class="module-card"><h3>向量检索模块</h3><p>负责相似召回和弱匹配支持。</p></article>
+            <article class="module-card"><h3>规则引擎与策略配置</h3><p>负责风险阈值、审核要求和流程收口。</p></article>
+            <article class="module-card"><h3>在线决策服务</h3><p>把检索、规则、模型和输出组织为任务链。</p></article>
+            <article class="module-card"><h3>Agent 编排层</h3><p>负责多步骤调用和任务状态推进。</p></article>
+            <article class="module-card"><h3>前端 / 工作台</h3><p>负责解释、审核、补问和交付协同。</p></article>
+            <article class="module-card"><h3>评测与监控</h3><p>负责结果评估、回流和运行状态监控。</p></article>
+          </div>
+        </section>
+
+        <section id="objects" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Objects and States</span>
+              <h2>核心技术对象与知识状态流转</h2>
+            </div>
+            <p>先建对象层，再建知识类型层，再围绕任务填内容，而不是先建全量世界模型。</p>
+          </div>
+          <div class="two-column">
+            <div class="card-grid">
+              <article class="object-card"><h3>菜品</h3><p>名称、风味、目标场景。</p></article>
+              <article class="object-card"><h3>菜谱版本</h3><p>version_id、参数包、适配版本。</p></article>
+              <article class="object-card"><h3>工艺步骤</h3><p>顺序、动作、阶段。</p></article>
+              <article class="object-card"><h3>参数项</h3><p>时长、火力、投料、速度。</p></article>
+              <article class="object-card"><h3>调整动作 / 原因</h3><p>知道改了什么，也知道为什么改。</p></article>
+              <article class="object-card"><h3>设备上下文 / 评价结果</h3><p>确保建议与设备和反馈绑定。</p></article>
+            </div>
+            <div class="timeline">
+              <div class="timeline-step"><strong>草稿</strong><p>原始记录或初始候选，尚未进入可用知识范围。</p></div>
+              <div class="timeline-arrow">↓</div>
+              <div class="timeline-step"><strong>候选</strong><p>AI 或人工归纳出的候选知识条目。</p></div>
+              <div class="timeline-arrow">↓</div>
+              <div class="timeline-step"><strong>待验证</strong><p>进入人工或流程验证阶段。</p></div>
+              <div class="timeline-arrow">↓</div>
+              <div class="timeline-step"><strong>已验证</strong><p>可以进入检索、规则和输出链路。</p></div>
+              <div class="timeline-arrow">↓</div>
+              <div class="timeline-step"><strong>失效</strong><p>被新知识替代或不再适配当前条件。</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="phases" class="section section-card section-primary reveal">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Phases</span>
+              <h2>阶段性交付地图</h2>
+            </div>
+            <p>阶段不是平均展开，而是按先打底、再增强、再交付、再固化的顺序推进。</p>
+          </div>
+          <div class="four-column">
+            <article class="road-card"><span class="status-pill chip-accent">Phase 1</span><h3>资产沉淀与知识主干</h3><p>统一对象、知识结构、规则边界和最小流程。</p></article>
+            <article class="road-card"><span class="status-pill">Phase 2</span><h3>AI 加工与检索增强</h3><p>批量加工历史资产，补结构化抽取与相似召回。</p></article>
+            <article class="road-card"><span class="status-pill">Phase 3</span><h3>策略协同与交付辅助</h3><p>把建议、规则、补问和人工确认组合成稳定链路。</p></article>
+            <article class="road-card"><span class="status-pill">Phase 4</span><h3>反馈闭环与能力固化</h3><p>让高频稳定局部能力逐步走向规则化、本地化和专用化。</p></article>
+          </div>
+        </section>
+
+        <section id="investment" class="section section-card section-secondary reveal archive-box">
+          <div class="section-heading section-heading-inline">
+            <div>
+              <span class="eyebrow">Investment Boundary</span>
+              <h2>模型 / 本地化 / 显卡投入判断边界</h2>
+            </div>
+            <p>当前不建议优先投入自建生成模型，只有当高频任务稳定、成本和延迟问题显著、且团队具备维护能力后，才逐步评估局部模型与算力投入。</p>
+          </div>
+          <div class="three-column">
+            <article class="card"><h3>现在先做</h3><p>数据、知识、规则、流程和最小闭环，先把任务主线跑通。</p></article>
+            <article class="card"><h3>再考虑</h3><p>当在线高频任务稳定、云端成本明显上涨、延迟诉求增强时，再考虑本地化与小模型。</p></article>
+            <article class="card"><h3>真要投入时优先</h3><p>优先固化高频、稳定、成本敏感的局部任务，而不是先追求通用 GPT 替代品。</p></article>
+          </div>
+          <details style="margin-top: 16px;">
+            <summary>展开查看旧技术交付页归档入口</summary>
+            <div class="card-grid" style="margin-top: 14px;">
+              <article class="archive-card">
+                <h3><a href="tech-delivery.html">旧技术交付工作台</a></h3>
+                <p>保留之前已完成的页面骨架、定义区和判断图区，作为新版的历史补充。</p>
+              </article>
+            </div>
+          </details>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <strong>技术交付工作台页</strong>
+        <p>当前页承接旧技术交付页面的主要内容，并按最新结构重新组织为“最终交付物”的主视图。</p>
+      </footer>
+    </div>
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>

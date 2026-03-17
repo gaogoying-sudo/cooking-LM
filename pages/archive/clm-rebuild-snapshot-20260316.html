@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooking LM / 重构主工作台</title>
+    <link rel="stylesheet" href="workspace-light.css" />
+    <link rel="stylesheet" href="clm-rebuild.css" />
+  </head>
+  <body class="workspace-page rebuild-page">
+    <div class="page-shell">
+      <header class="topbar rebuild-topbar">
+        <div class="topbar-row">
+          <div class="brand">
+            <span class="brand-kicker">CLM Rebuild Workspace</span>
+            <span class="brand-title">Cooking LM / 重构主工作台</span>
+            <span class="brand-note">当前分支内的重构主页面，重新组织项目定义、技术链路、交付、案例矩阵和进展计划。</span>
+          </div>
+          <div class="header-actions">
+            <a class="page-switch" href="index.html">返回当前主入口</a>
+            <a class="page-switch" href="clm-current-archive.html">查看历史快照</a>
+          </div>
+        </div>
+
+        <nav class="primary-nav" aria-label="一级目录">
+          <button class="primary-tab active" type="button" data-module="definition">项目定义</button>
+          <button class="primary-tab" type="button" data-module="main-chain">技术总链路</button>
+          <button class="primary-tab" type="button" data-module="delivery">技术交付</button>
+          <button class="primary-tab" type="button" data-module="matrix">案例矩阵</button>
+          <button class="primary-tab" type="button" data-module="plan">进展计划</button>
+          <button class="primary-tab" type="button" data-module="outputs">阶段性工作产出</button>
+        </nav>
+      </header>
+
+      <main class="rebuild-layout">
+        <aside class="secondary-sidebar section-card">
+          <div class="sidebar-head">
+            <span class="eyebrow">Section Menu</span>
+            <h2 id="sidebarTitle">项目定义</h2>
+          </div>
+          <nav id="secondaryNav" class="secondary-nav" aria-label="二级目录"></nav>
+          <div class="sidebar-note">
+            <strong>当前原则</strong>
+            <p>主信息默认展开，折叠只留给补充说明和历史参考。</p>
+          </div>
+        </aside>
+
+        <div class="module-stage">
+          <section class="module-panel active" data-module-panel="definition">
+            <section id="def-goal" class="section-card section-primary module-section">
+              <div class="section-heading">
+                <span class="eyebrow">Project Goal</span>
+                <h1>第一阶段要替代的是口味工程师的首轮到场交付工作</h1>
+                <p class="hero-subtitle">在口味工程师不到客户现场的前提下，使客户能够通过语音、文字、图片和设备交互表达需求，并由系统在设备侧生成一版高可用的初始菜谱方案，目标结果接近人工交付水平，并作为后续微调和收敛基础。</p>
+              </div>
+              <div class="detail-grid rebuild-detail-grid">
+                <div class="detail-box">
+                  <strong>建设对象</strong>
+                  <span>不是单独模型，也不是单独 Agent，而是围绕需求输入、知识、规则、模型和输出执行组织起来的交付系统。</span>
+                </div>
+                <div class="detail-box">
+                  <strong>阶段要求</strong>
+                  <span>先把客户表达需求、系统生成高可用初始菜谱、人工继续微调收敛这一条主链跑通。</span>
+                </div>
+                <div class="detail-box">
+                  <strong>交付标准</strong>
+                  <span>目标不是一次满分，而是让系统能替代首轮到场交付，把初版质量拉到可试做、可继续收敛的水平。</span>
+                </div>
+              </div>
+            </section>
+
+            <section id="def-scenes" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Application Scenes</span>
+                  <h2>三类应用场景</h2>
+                </div>
+                <p>先明确场景，再明确哪类场景是第一阶段主目标。</p>
+              </div>
+              <div class="three-column">
+                <article class="card">
+                  <span class="status-tag">场景 1</span>
+                  <h3>客户已有菜，目标是迁移复刻</h3>
+                  <p>已有人工经验和目标菜，最贴近真实交付，是 Phase 1 的主战场。</p>
+                </article>
+                <article class="card">
+                  <span class="status-tag">场景 2</span>
+                  <h3>客户没有现成菜谱，但市场上存在类似菜</h3>
+                  <p>需要相似检索、外部参考和弱建议能力支撑，适合当前阶段预埋能力。</p>
+                </article>
+                <article class="card">
+                  <span class="status-tag">场景 3</span>
+                  <h3>客户要做创意菜 / 新菜 / 数据库里没有参考</h3>
+                  <p>属于预研方向，目前不作为第一阶段主交付目标。</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="def-boundary" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Current Boundary</span>
+                  <h2>当前边界</h2>
+                </div>
+                <p>边界先收紧，项目主线才不会被稀释。</p>
+              </div>
+              <div class="card-grid">
+                <article class="card"><h3>第一阶段主攻场景 1</h3><p>围绕已有菜迁移复刻跑出可用的初始交付能力。</p></article>
+                <article class="card"><h3>兼顾场景 2 的能力预埋</h3><p>补相似检索、弱建议、补问和外部参考接入。</p></article>
+                <article class="card"><h3>场景 3 先作为预研</h3><p>只保留长期方向，不作为当前主交付目标。</p></article>
+              </div>
+            </section>
+
+            <section id="def-phase" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Current Stage</span>
+                  <h2>当前阶段目标</h2>
+                </div>
+                <p>当前阶段不是做全世界，而是先把最贴近交付价值的主链跑通。</p>
+              </div>
+              <div class="timeline">
+                <div class="timeline-step">
+                  <strong>需求表达进入系统</strong>
+                  <p>支持语音、文字、图片和设备交互承接客户需求。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>系统生成高可用初始方案</strong>
+                  <p>在设备侧产出首版菜谱 / 工艺包 / 参数包，而不是停留在口头建议。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>人工继续微调并回写</strong>
+                  <p>把首版交付结果变成后续知识、规则和参数调整依据。</p>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <section class="module-panel" data-module-panel="main-chain" hidden>
+            <section id="chain-overview" class="section-card section-primary module-section">
+              <div class="section-heading">
+                <span class="eyebrow">Main Chain</span>
+                <h1>技术总链路</h1>
+                <p class="hero-subtitle">原始数据接入层 → 结构化加工层 → 知识沉淀层 → 检索层 → 规则与策略层 → 模型推理层 → 输出执行层</p>
+              </div>
+              <div class="chain-track">
+                <div class="chain-card"><span class="node-label">01</span><h3>原始数据接入层</h3></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-card"><span class="node-label">02</span><h3>结构化加工层</h3></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-card"><span class="node-label">03</span><h3>知识沉淀层</h3></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-card"><span class="node-label">04</span><h3>检索层</h3></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-card"><span class="node-label">05</span><h3>规则与策略层</h3></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-card"><span class="node-label">06</span><h3>模型推理层</h3></div>
+                <div class="chain-arrow">→</div>
+                <div class="chain-card"><span class="node-label">07</span><h3>输出执行层</h3></div>
+              </div>
+            </section>
+
+            <section id="chain-ingest" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Layer 01</span>
+                  <h2>原始数据接入层</h2>
+                </div>
+                <p>把可能有价值的原始素材和原始证据，以可追踪、可登记、可管理的方式接入系统，形成原材料池。</p>
+              </div>
+              <div class="detail-grid rebuild-detail-grid">
+                <div class="detail-box"><strong>输入</strong><span>数据库、菜谱记录、设备日志、交付纪要、图片、视频、音频、专家经验。</span></div>
+                <div class="detail-box"><strong>处理动作</strong><span>数据接入、来源登记、元数据标记、时间戳记录、权限分类、原始证据归档。</span></div>
+                <div class="detail-box"><strong>输出</strong><span>原始素材池、原始证据池、已登记数据源、待解析素材队列。</span></div>
+                <div class="detail-box"><strong>当前建设重点</strong><span>先接稳定、高频、与样板任务直接相关的素材，不做无边界抓取。</span></div>
+              </div>
+            </section>
+
+            <section id="chain-structuring" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Layer 02</span>
+                  <h2>结构化加工层</h2>
+                </div>
+                <p>把不同来源、不同模态、不同粒度的原始素材映射到统一对象体系里的字段、标签、关系、时间线和证据链接。</p>
+              </div>
+              <div class="detail-grid rebuild-detail-grid">
+                <div class="detail-box"><strong>输入</strong><span>原始素材池、原始证据池、已登记数据源。</span></div>
+                <div class="detail-box"><strong>处理动作</strong><span>文本抽取、音频转写、视频切片、步骤识别、参数识别、时间线抽取、对象映射、证据挂载。</span></div>
+                <div class="detail-box"><strong>输出</strong><span>结构化记录、对象挂载结果、标签关系、待沉淀候选。</span></div>
+                <div class="detail-box"><strong>当前建设重点</strong><span>先围绕菜品、菜谱版本、工艺步骤、参数项、调整动作和调整原因这些核心对象打底。</span></div>
+              </div>
+            </section>
+
+            <section id="chain-knowledge" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Layer 03</span>
+                  <h2>知识沉淀层</h2>
+                </div>
+                <p>不是把所有结构化数据自动升华成知识，而是从中筛选、归纳、验证出可复用、可解释、可决策的经验、规则、模式和模板。</p>
+              </div>
+              <div class="detail-grid rebuild-detail-grid">
+                <div class="detail-box"><strong>输入</strong><span>结构化记录、相似记录聚合结果、人工反馈、历史交付结果。</span></div>
+                <div class="detail-box"><strong>处理动作</strong><span>规律归纳、候选规则生成、经验条目提炼、失败模式聚类、风险映射、验证状态管理。</span></div>
+                <div class="detail-box"><strong>输出</strong><span>经验规则、放量规则、调参原因模板、失败模式、风险策略、标杆菜谱。</span></div>
+                <div class="detail-box"><strong>当前建设重点</strong><span>不做全量世界建模，先围绕任务闭环沉淀能直接支撑决策的知识类型。</span></div>
+              </div>
+            </section>
+
+            <section id="chain-retrieval" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Layer 04</span>
+                  <h2>检索层</h2>
+                </div>
+                <p>检索层负责找。</p>
+              </div>
+              <div class="detail-grid rebuild-detail-grid">
+                <div class="detail-box"><strong>输入</strong><span>用户需求、结构化任务、当前上下文、查询条件。</span></div>
+                <div class="detail-box"><strong>处理动作</strong><span>数据库检索、知识库命中、向量相似召回、候选集合组织。</span></div>
+                <div class="detail-box"><strong>输出</strong><span>候选菜谱集合、候选案例集合、候选规则集合、命中来源。</span></div>
+                <div class="detail-box"><strong>当前建设重点</strong><span>先保证相关上下文能找全，尤其支撑样板任务和场景 1 的强相关召回。</span></div>
+              </div>
+            </section>
+
+            <section id="chain-rules" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Layer 05</span>
+                  <h2>规则与策略层</h2>
+                </div>
+                <p>规则与策略层负责裁。</p>
+              </div>
+              <div class="detail-grid rebuild-detail-grid">
+                <div class="detail-box"><strong>输入</strong><span>检索结果、设备上下文、用户角色、知识状态、风险等级、任务类型。</span></div>
+                <div class="detail-box"><strong>处理动作</strong><span>过滤、约束、边界控制、审核要求判断、流程收口、自动下发限制。</span></div>
+                <div class="detail-box"><strong>输出</strong><span>可进入下一步的候选范围、过滤原因、当前可输出建议等级、是否需要人工审核。</span></div>
+                <div class="detail-box"><strong>当前建设重点</strong><span>先把设备约束、知识状态、风险阈值和人工确认条件做成稳定底线。</span></div>
+              </div>
+            </section>
+
+            <section id="chain-reasoning" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Layer 06</span>
+                  <h2>模型推理层</h2>
+                </div>
+                <p>模型推理层负责想。</p>
+              </div>
+              <div class="detail-grid rebuild-detail-grid">
+                <div class="detail-box"><strong>输入</strong><span>规则筛后的少量候选、当前需求描述、任务目标、必要业务约束。</span></div>
+                <div class="detail-box"><strong>处理动作</strong><span>语义理解、比较、排序、解释、建议生成、缺口识别。</span></div>
+                <div class="detail-box"><strong>输出</strong><span>排序后的建议结果、推荐理由、参数建议、风险说明、缺失信息提示。</span></div>
+                <div class="detail-box"><strong>当前建设重点</strong><span>让模型只处理局部认知任务，不让它承担记忆、规则和执行主逻辑。</span></div>
+              </div>
+            </section>
+
+            <section id="chain-output" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Layer 07</span>
+                  <h2>输出执行层</h2>
+                </div>
+                <p>把建议结果转成真实业务动作。</p>
+              </div>
+              <div class="detail-grid rebuild-detail-grid">
+                <div class="detail-box"><strong>输入</strong><span>建议结果、风险等级、审核结论、任务状态。</span></div>
+                <div class="detail-box"><strong>处理动作</strong><span>输出设备侧菜谱 / 工艺包 / 参数包，触发补问、审核、转人工与结果回写。</span></div>
+                <div class="detail-box"><strong>输出</strong><span>设备执行结果、内部辅助交付结果、回写记录、知识建设任务。</span></div>
+                <div class="detail-box"><strong>当前建设重点</strong><span>把“系统结果如何真正落到交付工作里”先做扎实，不让系统停在建议层。</span></div>
+              </div>
+            </section>
+          </section>
+
+          <section class="module-panel" data-module-panel="delivery" hidden>
+            <section id="delivery-target" class="section-card section-primary module-section">
+              <div class="section-heading">
+                <span class="eyebrow">Delivery Result</span>
+                <h1>最终交付的是什么</h1>
+                <p class="hero-subtitle">先从业务可见结果倒推，而不是一上来罗列数据库、Agent 和向量库。</p>
+              </div>
+              <div class="three-column">
+                <article class="card">
+                  <h3>设备侧可执行菜谱 / 工艺包 / 参数包</h3>
+                  <p>这是客户侧和设备侧真正接收到的可执行结果，不是口头建议。</p>
+                </article>
+                <article class="card">
+                  <h3>内部知识与决策系统</h3>
+                  <p>这是持续积累规则、案例、风险边界和决策能力的主干系统。</p>
+                </article>
+                <article class="card">
+                  <h3>交付辅助工作台</h3>
+                  <p>承接补问、审核、解释、转人工和结果回写，而不是只有一个对话框入口。</p>
+                </article>
+              </div>
+            </section>
+
+            <section id="delivery-system" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">System Layers</span>
+                  <h2>这些交付物依赖哪些系统层</h2>
+                </div>
+                <p>先看交付物，再看它依赖的系统层。</p>
+              </div>
+              <div class="card-grid">
+                <article class="module-card"><h3>数据库</h3><p>承接主数据、版本和任务状态。</p></article>
+                <article class="module-card"><h3>知识库</h3><p>承接规则、模板、失败模式和标杆案例。</p></article>
+                <article class="module-card"><h3>检索</h3><p>负责从数据库、知识库和相似库中找相关上下文。</p></article>
+                <article class="module-card"><h3>规则</h3><p>负责风险控制、审核边界和流程收口。</p></article>
+                <article class="module-card"><h3>模型</h3><p>负责局部理解、排序、解释和建议生成。</p></article>
+                <article class="module-card"><h3>Agent</h3><p>负责串联任务步骤，不作为系统主脑。</p></article>
+                <article class="module-card"><h3>输出执行格式</h3><p>负责把结果组织成设备与工作台可消费的数据格式。</p></article>
+              </div>
+            </section>
+
+            <section id="delivery-status" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Build Status</span>
+                  <h2>这些能力当前分别处于什么状态</h2>
+                </div>
+                <p>不用概念堆叠，直接看状态。</p>
+              </div>
+              <div class="timeline">
+                <div class="timeline-step">
+                  <strong>第一层：已有基础</strong>
+                  <p>数据库 / 菜谱信息 / 历史记录、口味工程师经验、客户需求输入、设备执行日志已经存在，是当前系统建设的原材料基础。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>第二层：正在建设的结构层</strong>
+                  <p>对象体系、结构化加工、知识状态管理、样板任务闭环正在形成，它们决定系统能否把原始素材真正组织起来。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>第三层：待稳定的系统层</strong>
+                  <p>稳定规则引擎、相似检索主链、输出执行格式、反馈回写机制还需要继续稳定，决定系统能否持续交付。</p>
+                </div>
+              </div>
+            </section>
+
+            <section id="delivery-objects" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Core Objects</span>
+                  <h2>核心对象</h2>
+                </div>
+                <p>对象层要稳，后面的知识和决策才能稳。</p>
+              </div>
+              <div class="card-grid">
+                <article class="object-card"><h3>菜品</h3><p>一句话定义：承接这道菜的业务身份与风味定位。</p><p>关键字段示例：dish_id、菜品名、风味标签、目标场景。</p><p>与谁关联：菜谱版本、设备上下文、评价结果。</p><p>当前建设状态：对象骨架明确，字段细化中。</p><p>为什么重要：它是所有版本、规则和案例的主对象。</p></article>
+                <article class="object-card"><h3>菜谱版本</h3><p>一句话定义：承接某一道菜在某个阶段、某种设备或某次调优下的具体版本。</p><p>关键字段示例：version_id、参数包、适配设备版本、状态。</p><p>与谁关联：菜品、工艺步骤、参数项、评价结果。</p><p>当前建设状态：主字段明确，版本链规则待细化。</p><p>为什么重要：它是交付、复刻和回写的直接载体。</p></article>
+                <article class="object-card"><h3>工艺步骤</h3><p>一句话定义：承接菜谱执行中的动作顺序和阶段变化。</p><p>关键字段示例：step_id、动作、阶段、时长、触发条件。</p><p>与谁关联：菜谱版本、参数项、调整动作。</p><p>当前建设状态：步骤和阶段概念已锁，执行映射待补。</p><p>为什么重要：没有步骤对象，就无法把菜谱真正转成可执行流程。</p></article>
+                <article class="object-card"><h3>参数项</h3><p>一句话定义：承接设备侧可以真正控制和调整的变量。</p><p>关键字段示例：火力、时长、速度、投料量、阈值。</p><p>与谁关联：工艺步骤、设备上下文、评价结果。</p><p>当前建设状态：基础参数清单明确，依赖关系待沉淀。</p><p>为什么重要：这是系统输出到设备侧时最关键的执行对象。</p></article>
+                <article class="object-card"><h3>调整动作 / 调整原因</h3><p>一句话定义：把“改了什么”和“为什么改”绑定成一组可学习的记录。</p><p>关键字段示例：调整动作、调整前后差异、触发原因、人工备注。</p><p>与谁关联：菜谱版本、参数项、评价结果。</p><p>当前建设状态：结构框架明确，经验公式仍待补。</p><p>为什么重要：这是专家经验显性化和后续规则沉淀的关键桥梁。</p></article>
+                <article class="object-card"><h3>设备上下文 / 评价结果</h3><p>一句话定义：把建议始终放回具体设备和试做结果里理解。</p><p>关键字段示例：设备型号、执行状态、评分、缺陷项、反馈标签。</p><p>与谁关联：菜谱版本、参数项、调整动作。</p><p>当前建设状态：设备维度已有基础，评价结构仍在细化。</p><p>为什么重要：它保证系统不是抽象建议，而是贴着真实执行效果生长。</p></article>
+              </div>
+            </section>
+
+            <section id="delivery-state" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Knowledge State</span>
+                  <h2>知识状态</h2>
+                </div>
+                <p>AI 生成候选，不等于直接成为有效知识。</p>
+              </div>
+              <div class="timeline">
+                <div class="timeline-step"><strong>草稿</strong><p>状态定义：原始整理结果和初始提炼内容。谁生成：AI 或人工初步整理。谁审核：暂不进入正式审核。典型内容形态：字段草稿、候选标签、原始摘录。是否可参与线上决策：不可以。是否可进入规则 / 检索 / 建议链路：不可以。如何进入下一状态：经人工筛选后升为候选。常见问题：噪声多、结构不稳。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>候选</strong><p>状态定义：AI 或人工归纳出的候选知识。谁生成：结构化加工结果归纳、人工总结、模型候选生成。谁审核：业务或专家做初筛。典型内容形态：候选规则、经验条目、失败模式草稿。是否可参与线上决策：原则上不直接参与。是否可进入规则 / 检索 / 建议链路：可进入离线整理，不进入线上强决策。如何进入下一状态：进入待验证。常见问题：看起来合理但证据链不足。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>待验证</strong><p>状态定义：进入人工验证、样板任务验证或流程验证。谁生成：候选知识经过初筛后转入。谁审核：口味工程师、业务负责人或样板任务验证流程。典型内容形态：待确认规则、待验证放量关系、待验证风险条目。是否可参与线上决策：仅可作为弱参考。是否可进入规则 / 检索 / 建议链路：可进入低权重检索参考，不进入强规则链。如何进入下一状态：验证通过后升为已验证。常见问题：场景适用范围不清。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>已验证</strong><p>状态定义：已经过验证，可以进入线上链路。谁生成：验证流程确认后的稳定知识。谁审核：最终由业务或专家确认。典型内容形态：标杆菜谱、已验证规则、稳定风险策略。是否可参与线上决策：可以。是否可进入规则 / 检索 / 建议链路：可以进入检索、规则和建议主链。如何进入下一状态：被新版本替代或不适用时转失效。常见问题：需要持续监控是否过时。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>失效</strong><p>状态定义：不再适配当前边界或被新版本替换。谁生成：新验证结果、业务变化或设备变化触发。谁审核：人工确认失效范围。典型内容形态：旧规则、旧版本模板、过期风险映射。是否可参与线上决策：不可以。是否可进入规则 / 检索 / 建议链路：只保留历史参考，不进入当前线上主链。如何进入下一状态：作为历史引用保留。常见问题：历史依赖未及时解除。</p></div>
+              </div>
+            </section>
+
+            <section id="delivery-phases" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Phase Map</span>
+                  <h2>阶段地图</h2>
+                </div>
+                <p>不把所有能力一次性打满，而是按交付价值排序推进。</p>
+              </div>
+              <div class="four-column">
+                <article class="road-card"><span class="status-pill chip-accent">Phase 1</span><h3>对象与主链打底</h3><p>先把对象、数据接入、结构化和样板闭环打通。</p></article>
+                <article class="road-card"><span class="status-pill">Phase 2</span><h3>知识与检索增强</h3><p>补知识沉淀、相似检索和案例召回。</p></article>
+                <article class="road-card"><span class="status-pill">Phase 3</span><h3>规则与交付协同</h3><p>稳定审核、补问、风险控制和交付工作台。</p></article>
+                <article class="road-card"><span class="status-pill">Phase 4</span><h3>能力固化与局部本地化</h3><p>把高频稳定局部能力逐步固化。</p></article>
+              </div>
+            </section>
+
+            <section id="delivery-current" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Current Assets and Gaps</span>
+                  <h2>当前已有与待建</h2>
+                </div>
+                <p>用“已有 / 在建 / 待建”把交付主干收口。</p>
+              </div>
+              <div class="three-column">
+                <article class="card"><span class="status-pill chip-success">已有</span><h3>资源</h3><p>后台数据库、菜谱信息、客户需求输入、录菜记录、设备日志、历史交付案例、口味工程师经验。</p></article>
+                <article class="card"><span class="status-pill chip-accent">在建</span><h3>能力</h3><p>对象模型、结构化加工、知识状态流转、样板任务闭环、统一工作台表达。</p></article>
+                <article class="card"><span class="status-pill chip-warn">待建</span><h3>系统层</h3><p>稳定规则引擎、相似检索主链、输出执行格式、稳定回写机制。</p></article>
+              </div>
+              <div class="summary-banner" style="margin-top: 18px;">
+                <strong>相关维度展开、经验规则、调研沉淀见：阶段性工作产出模块</strong>
+                <p>技术交付模块展示的是系统能力映射；阶段性工作产出模块展示的是已经形成的具体沉淀成果。两者需要持续互相引用。</p>
+              </div>
+            </section>
+          </section>
+
+          <section class="module-panel" data-module-panel="matrix" hidden>
+            <section id="matrix-scenes" class="section-card section-primary module-section">
+              <div class="section-heading">
+                <span class="eyebrow">Scenario Matrix</span>
+                <h1>案例矩阵</h1>
+                <p class="hero-subtitle">固定示例需求：我要一个北京口味的宫保鸡丁</p>
+                <p class="hero-description">这一模块重点说明三件事：输入模糊不等于系统不能工作，数据少不等于系统完全停机，数据状态不同意味着输出能力不同。</p>
+              </div>
+              <div class="card-grid">
+                <article class="scenario-card"><h3>数据充分</h3><p>高质量、已验证、强相关数据充足，可进入强建议模式。</p></article>
+                <article class="scenario-card"><h3>数据一般</h3><p>有一定量相关数据，但精度和覆盖不足，只能给建议级结果。</p></article>
+                <article class="scenario-card"><h3>数据零散</h3><p>只有片段案例和片段规则，系统只能给参考和缺失项。</p></article>
+                <article class="scenario-card"><h3>数据缺失</h3><p>缺少内部资产，系统不能给强建议，只能引导下一步动作。</p></article>
+                <article class="scenario-card"><h3>输入模糊但数据丰富</h3><p>输入很宽，但系统仍能通过逐层缩圈给出候选范围和补问。</p></article>
+              </div>
+            </section>
+
+            <section id="matrix-state-grid" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Data State Matrix</span>
+                  <h2>数据状态矩阵</h2>
+                </div>
+                <p>先明确不同数据状态，再看同一个案例为什么会走出完全不同的路径。</p>
+              </div>
+              <div class="matrix-table panel">
+                <div class="matrix-row">
+                  <div class="matrix-head">状态</div>
+                  <div class="matrix-head">原始素材</div>
+                  <div class="matrix-head">结构化对象</div>
+                  <div class="matrix-head">已验证知识</div>
+                  <div class="matrix-head">允许输出强度</div>
+                  <div class="matrix-head">默认后续动作</div>
+                </div>
+                <div class="matrix-row"><div class="matrix-head">数据充分</div><div class="matrix-cell">充足</div><div class="matrix-cell">完整</div><div class="matrix-cell">高可用</div><div class="matrix-cell">强建议</div><div class="matrix-cell">人工确认后执行</div></div>
+                <div class="matrix-row"><div class="matrix-head">数据一般</div><div class="matrix-cell">中等</div><div class="matrix-cell">部分完整</div><div class="matrix-cell">部分可用</div><div class="matrix-cell">建议级</div><div class="matrix-cell">补问 + 审核</div></div>
+                <div class="matrix-row"><div class="matrix-head">数据零散</div><div class="matrix-cell">碎片化</div><div class="matrix-cell">弱挂载</div><div class="matrix-cell">片段知识</div><div class="matrix-cell">参考级</div><div class="matrix-cell">转人工 + 补全知识</div></div>
+                <div class="matrix-row"><div class="matrix-head">数据缺失</div><div class="matrix-cell">极弱</div><div class="matrix-cell">几乎没有</div><div class="matrix-cell">不可用</div><div class="matrix-cell">不支持强建议</div><div class="matrix-cell">补数 + 进入知识建设</div></div>
+                <div class="matrix-row"><div class="matrix-head">输入模糊但数据丰富</div><div class="matrix-cell">充足</div><div class="matrix-cell">完整</div><div class="matrix-cell">高可用</div><div class="matrix-cell">候选级到建议级</div><div class="matrix-cell">补问后继续收敛</div></div>
+              </div>
+            </section>
+
+            <section id="matrix-processing" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Layered Processing</span>
+                  <h2>北京口味宫保鸡丁全链路案例</h2>
+                </div>
+                <p>这里不再泛讲原则，而是直接围绕“我要一个北京口味的宫保鸡丁”把从输入到输出、再到失败降级的整条链讲清楚。</p>
+              </div>
+              <div class="timeline">
+                <div class="timeline-step">
+                  <strong>1. 输入是什么</strong>
+                  <p>用户原始输入文本是“我要一个北京口味的宫保鸡丁”。当前模糊点包括：偏甜还是偏酸、偏辣程度、试菜份量、设备型号、客户最终是要一版参考还是要接近可直接执行的初版方案。当前目标是把模糊输入先转成可检索、可缩圈的任务表达。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>2. 原始数据接入层会找什么</strong>
+                  <p>系统会先拉内部已有的宫保鸡丁相关菜谱、北方 / 北京风味相关历史记录、相似客户案例、外部参考素材以及口味工程师经验条目。当前输入是客户需求和设备侧上下文，当前动作是把相关原始素材接进来并登记来源，当前输出是一个可被继续处理的原始证据池。当前风险是：如果这一步命中的原始素材太弱，后面所有层都会被迫降级。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>3. 结构化加工层会抽什么</strong>
+                  <p>系统要把原始素材里的菜品对象、风味标签、关键食材、关键工艺、设备上下文和风险标签抽出来，并挂到统一对象体系上。当前输入是原始证据池，当前动作是做文本抽取、标签识别、步骤与参数抽取、证据挂载，当前输出是宫保鸡丁相关的结构化对象集合。当前风险是：风味标签和调整原因如果抽不稳，后续知识命中会偏弱。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>4. 知识沉淀层命中什么</strong>
+                  <p>在这个案例里，知识沉淀层真正重要的是已验证规则、失败模式、北京 / 北方风味偏好经验、相似菜映射知识和参数依赖知识。当前输入是结构化对象集合，当前动作是命中已有知识条目并判断哪些是已验证、哪些还只是候选，当前输出是可进入检索与规则层的知识资产包。当前风险是：如果只有候选知识而没有已验证知识，输出等级必须下降。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>5. 检索层在这个案例里“找”的是什么</strong>
+                  <p>检索层负责找相关上下文。它找的是候选菜谱、候选案例、候选规则，而不是直接给答案。当前输入是任务表达和知识资产包，当前目标是尽量找全跟“宫保鸡丁 + 北京口味 + 当前设备”相关的上下文，当前动作是数据库检索、知识库命中和相似召回，当前输出是候选菜谱范围、命中案例和命中规则集合。当前限制是：检索层只负责找，不负责判断这些候选能不能直接进入输出。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>6. 规则与策略层在这个案例里“裁”的是什么</strong>
+                  <p>规则层裁的是边界、风险和流程。它会去掉未验证、失效、不适配当前设备或与当前任务目标不匹配的候选；它还要判断当前是否必须补问“偏甜 / 偏酸 / 偏辣”，是否必须人工审核，是否允许进入强建议模式。当前输入是候选菜谱、候选案例、候选规则和设备上下文，当前动作是过滤与收口，当前输出是一个被压缩后的可用候选范围和当前允许输出的建议等级。当前限制是：规则层不负责给推荐理由，但会决定模型最多能往下做多深。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>7. 模型推理层在这个案例里“想”的是什么</strong>
+                  <p>模型层想的是：这里的“北京口味”更接近哪类风味路径，候选版本之间哪个更贴近当前场景，是否需要继续补问“偏甜 / 偏酸 / 偏辣”，以及如何形成推荐理由。当前输入是规则筛后的少量候选和必要业务约束，当前目标是进一步缩圈而不是擅自发明知识，当前动作是理解、比较、排序、解释和建议生成，当前输出是推荐理由、候选排序和参数建议等级。当前风险是：如果候选本身弱，模型层只能做弱建议与缺口识别，不能装作很确定。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>8. 最终输出是什么</strong>
+                  <p>在数据充分时，最终输出可以是 2–3 个候选菜谱范围、推荐理由、参数建议和风险提示；在数据一般时，最终输出是建议级候选 + 补问；在数据零散时，最终输出是相似案例参考和缺失项；在数据缺失时，最终输出只能是下一步引导。当前输出的核心不是“给没给答案”，而是“给到了什么等级的结果”。</p>
+                </div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step">
+                  <strong>9. 数据不足时怎么降级</strong>
+                  <p>当数据不足或知识不足时，系统要按顺序降级：先补问，再给弱建议，再转人工，最后进入知识建设队列。当前动作不是硬撑出一个假答案，而是明确告诉系统和人下一步该怎么推进。这也是为什么数据少不等于系统停机，输入模糊不等于系统不能工作。</p>
+                </div>
+              </div>
+            </section>
+
+            <section id="matrix-output" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Output Capability</span>
+                  <h2>输出能力矩阵</h2>
+                </div>
+                <p>同一技术框架，在不同数据状态下，输出能力等级完全不同。</p>
+              </div>
+              <div class="matrix-table panel">
+                <div class="matrix-row">
+                  <div class="matrix-head">能力项</div>
+                  <div class="matrix-head">数据充分</div>
+                  <div class="matrix-head">数据一般</div>
+                  <div class="matrix-head">数据零散</div>
+                  <div class="matrix-head">数据缺失</div>
+                  <div class="matrix-head">输入模糊但数据丰富</div>
+                </div>
+                <div class="matrix-row"><div class="matrix-head">候选菜谱输出</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">仅参考</div><div class="matrix-cell">不支持</div><div class="matrix-cell">强支持</div></div>
+                <div class="matrix-row"><div class="matrix-head">推荐排序</div><div class="matrix-cell">强支持</div><div class="matrix-cell">中支持</div><div class="matrix-cell">仅参考</div><div class="matrix-cell">不支持</div><div class="matrix-cell">中支持</div></div>
+                <div class="matrix-row"><div class="matrix-head">参数建议</div><div class="matrix-cell">强支持</div><div class="matrix-cell">仅参考</div><div class="matrix-cell">不支持</div><div class="matrix-cell">不支持</div><div class="matrix-cell">弱支持</div></div>
+                <div class="matrix-row"><div class="matrix-head">风险提示</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div></div>
+                <div class="matrix-row"><div class="matrix-head">是否需要补问</div><div class="matrix-cell">弱支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div></div>
+                <div class="matrix-row"><div class="matrix-head">是否需要人工审核</div><div class="matrix-cell">弱支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">弱支持</div></div>
+                <div class="matrix-row"><div class="matrix-head">是否进入知识建设队列</div><div class="matrix-cell">不支持</div><div class="matrix-cell">仅参考</div><div class="matrix-cell">强支持</div><div class="matrix-cell">强支持</div><div class="matrix-cell">不支持</div></div>
+              </div>
+            </section>
+
+            <section id="matrix-failure" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Correct Failure</span>
+                  <h2>正确失败机制</h2>
+                </div>
+                <p>系统在“答不上来”时也要正确工作。</p>
+              </div>
+              <div class="four-column">
+                <article class="failure-card"><h3>补问</h3><p>偏甜还是偏辣、单份试菜还是大份交付、当前设备型号是什么。</p></article>
+                <article class="failure-card"><h3>弱建议</h3><p>仅给相似案例参考，不给参数包，不给直接下发建议。</p></article>
+                <article class="failure-card"><h3>转人工</h3><p>需口味工程师介入、需业务验证、需现场交付确认。</p></article>
+                <article class="failure-card"><h3>进入知识建设队列</h3><p>当前无匹配知识，需要新增语料、案例和规则验证。</p></article>
+              </div>
+            </section>
+          </section>
+
+          <section class="module-panel" data-module-panel="outputs" hidden>
+            <section id="outputs-overview" class="section-card section-primary module-section">
+              <div class="section-heading">
+                <span class="eyebrow">Production Overview</span>
+                <h1>阶段性工作产出</h1>
+                <p class="hero-subtitle">把已经形成的定义稿、维度展开、规则框架、调研沉淀和技术交付项正式纳入工作台体系。</p>
+                <p class="hero-description">这个模块不是附件区，而是整个系统里的交付记录 / 知识资产沉淀区。以后每次新增维度、经验、公式、调研结果和结构化文本资产，都应该在这里有位置，并且能够回指到技术层、业务场景和当前计划。</p>
+              </div>
+              <div class="matrix-table panel">
+                <div class="matrix-row">
+                  <div class="matrix-head">产出名称</div>
+                  <div class="matrix-head">产出类型</div>
+                  <div class="matrix-head">来源</div>
+                  <div class="matrix-head">服务对象</div>
+                  <div class="matrix-head">当前状态</div>
+                  <div class="matrix-head">关联页面 / 最近更新</div>
+                </div>
+                <div class="matrix-row"><div class="matrix-head">技术交付工作台定义稿</div><div class="matrix-cell">技术定义</div><div class="matrix-cell">交付工作台重构</div><div class="matrix-cell">技术交付模块</div><div class="matrix-cell">在用</div><div class="matrix-cell">技术交付 / 本轮</div></div>
+                <div class="matrix-row"><div class="matrix-head">技术分层案例矩阵定义稿</div><div class="matrix-cell">案例框架</div><div class="matrix-cell">案例矩阵重构</div><div class="matrix-cell">案例矩阵模块</div><div class="matrix-cell">在用</div><div class="matrix-cell">案例矩阵 / 本轮</div></div>
+                <div class="matrix-row"><div class="matrix-head">前三层定义修正版</div><div class="matrix-cell">概念定义</div><div class="matrix-cell">知识形成链路重写</div><div class="matrix-cell">技术总链路 / 技术交付</div><div class="matrix-cell">在用</div><div class="matrix-cell">技术总链路 / 已形成</div></div>
+                <div class="matrix-row"><div class="matrix-head">核心对象模型初版</div><div class="matrix-cell">对象模型</div><div class="matrix-cell">技术交付深化</div><div class="matrix-cell">结构化加工 / 知识沉淀</div><div class="matrix-cell">进行中</div><div class="matrix-cell">技术交付 / 本轮</div></div>
+                <div class="matrix-row"><div class="matrix-head">菜谱维度展开底稿</div><div class="matrix-cell">维度体系</div><div class="matrix-cell">本轮新增沉淀</div><div class="matrix-cell">结构化加工 / 知识沉淀</div><div class="matrix-cell">框架已挂载</div><div class="matrix-cell">阶段产出 / 本轮</div></div>
+                <div class="matrix-row"><div class="matrix-head">样板任务定义稿</div><div class="matrix-cell">任务闭环</div><div class="matrix-cell">样板场景页</div><div class="matrix-cell">样板任务 / 进展计划</div><div class="matrix-cell">进行中</div><div class="matrix-cell">样板闭环 / 当前迭代</div></div>
+              </div>
+            </section>
+
+            <section id="outputs-dimensions" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Recipe Dimensions</span>
+                  <h2>菜谱维度展开</h2>
+                </div>
+                <p>这部分正式承接菜谱解析、结构化建模和智能菜谱中台底座维度体系，不再散落在对话里。</p>
+              </div>
+              <div class="card-grid">
+                <article class="card"><h3>1. 菜谱基础标识维度</h3><p>定义菜谱是谁、对应什么版本、归属哪条任务主线。</p><p>示例：recipe_id、version_id、来源、状态。服务任务：版本管理。</p></article>
+                <article class="card"><h3>2. 业务定位与需求场景维度</h3><p>定义这道菜服务哪类客户目标和交付场景。</p><p>示例：交付场景、客户目标、使用目的。服务任务：任务路由。</p></article>
+                <article class="card"><h3>3. 菜品分类维度</h3><p>定义菜系、类型、冷热、主辅定位。</p><p>示例：菜系、子类、主菜/配菜。服务任务：检索与相似匹配。</p></article>
+                <article class="card"><h3>4. 感官目标维度</h3><p>定义目标口味、质地、颜色、香气和成品状态。</p><p>示例：酸甜辣、软硬、挂汁程度。服务任务：结果评估。</p></article>
+                <article class="card"><h3>5. 客户目标表达维度</h3><p>定义客户原始表达如何进入系统。</p><p>示例：语音文本、图片参考、设备上下文。服务任务：需求解析。</p></article>
+                <article class="card"><h3>6. 食材维度</h3><p>定义主料、辅料、切配形态和质量要求。</p><p>示例：食材名、规格、预处理方式。服务任务：对象建模。</p></article>
+                <article class="card"><h3>7. 配方维度</h3><p>定义调味料、比例、配方逻辑和依赖关系。</p><p>示例：调味料项、比例、敏感度。服务任务：参数建议。</p></article>
+                <article class="card"><h3>8. 工艺流程维度</h3><p>定义步骤、阶段、动作顺序和时间线。</p><p>示例：step_id、动作、阶段、时长。服务任务：工艺映射。</p></article>
+                <article class="card"><h3>9. 设备执行映射维度</h3><p>定义工艺如何映射到设备动作和执行参数。</p><p>示例：火力、速度、投料点。服务任务：设备侧输出。</p></article>
+                <article class="card"><h3>10. 标准化与复用维度</h3><p>定义可复用模板、标准版和适配边界。</p><p>示例：模板来源、复用等级。服务任务：模板沉淀。</p></article>
+                <article class="card"><h3>11. 区域化与版本维度</h3><p>定义区域口味差异、地方版本和变体关系。</p><p>示例：北京风味、北方风味、区域标签。服务任务：区域适配。</p></article>
+                <article class="card"><h3>12. 交付与调优维度</h3><p>定义首版方案、人工调整和收敛记录。</p><p>示例：调整动作、调整原因、交付轮次。服务任务：反馈闭环。</p></article>
+                <article class="card"><h3>13. 结果评估维度</h3><p>定义结果质量、口味评价和执行稳定性。</p><p>示例：评分、评价标签、缺陷项。服务任务：效果回写。</p></article>
+                <article class="card"><h3>14. 知识沉淀维度</h3><p>定义哪些结构化结果可进入经验规则与知识条目。</p><p>示例：规则候选、失败模式、标杆菜谱。服务任务：知识沉淀。</p></article>
+                <article class="card"><h3>15. AI 训练与中台能力维度</h3><p>定义哪些字段和标签可反哺训练、检索和中台能力。</p><p>示例：训练样本标签、召回特征、解释字段。服务任务：能力增强。</p></article>
+                <article class="card"><h3>16. 风控与约束维度</h3><p>定义风险边界、设备限制和审核要求。</p><p>示例：禁忌动作、风险阈值、必须人工。服务任务：规则控制。</p></article>
+                <article class="card"><h3>17. 可视化管理与统计分析维度</h3><p>定义统计口径、状态分布和管理视图字段。</p><p>示例：完成率、命中率、状态数量。服务任务：工作台管理。</p></article>
+                <article class="card"><h3>18. 核心对象字段建议</h3><p>定义菜品、版本、步骤、参数、调整、评价等对象必备字段。</p><p>示例：主键、关联键、状态字段。服务任务：对象层落地。</p></article>
+                <article class="card"><h3>19. 核心评分建议</h3><p>定义首版质量、可执行性、稳定性和风险评分。</p><p>示例：首版可用分、稳定分、风险分。服务任务：结果判断。</p></article>
+                <article class="card"><h3>20. 一句话总定义</h3><p>菜谱不是一段说明文本，而是一个可被结构化、可被执行、可被评估、可被沉淀的任务对象集合。</p><p>服务任务：统一概念底座。</p></article>
+              </div>
+            </section>
+
+            <section id="outputs-rules" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Rule Assets</span>
+                  <h2>经验规则 / 经验公式</h2>
+                </div>
+                <p>先建立结构化空框架，后续规则、经验和公式都往这里沉淀。</p>
+              </div>
+              <div class="card-grid">
+                <article class="card"><h3>放量规则框架</h3><p>规则类型：放量规则。输入条件：原始份量、目标份量、设备型号。输出建议：参数调整与风险提醒。状态：候选。</p></article>
+                <article class="card"><h3>调味料敏感度经验</h3><p>规则类型：味型依赖。输入条件：调味料变化范围。输出建议：增减边界。状态：草稿。</p></article>
+                <article class="card"><h3>工艺禁忌</h3><p>规则类型：风险前置。输入条件：设备能力、菜品类型。输出建议：禁止动作与替代路径。状态：待验证。</p></article>
+                <article class="card"><h3>调参经验公式</h3><p>规则类型：经验公式。输入条件：口味偏差、执行结果。输出建议：调整动作与原因。状态：草稿。</p></article>
+              </div>
+            </section>
+
+            <section id="outputs-research" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Research and Interviews</span>
+                  <h2>调研与访谈记录</h2>
+                </div>
+                <p>不做会议纪要仓库，而是做结构化摘要页。</p>
+              </div>
+              <div class="card-grid">
+                <article class="card"><h3>口味工程师访谈 / 宫保鸡丁风味判断</h3><p>调研对象：口味工程师。核心结论：北京口味判断要看甜酸辣平衡和挂汁厚度。待验证项：不同客户侧对“北京口味”偏差。关联场景：案例矩阵。</p></article>
+                <article class="card"><h3>外部资料整理 / 北方风味参考</h3><p>调研对象：公开菜谱、博客、视频。核心结论：外部资料可作为候选参考，不可直接进入强决策链。关联层：原始数据接入层。</p></article>
+                <article class="card"><h3>客户反馈摘要 / 首版可用度</h3><p>调研对象：客户与交付记录。核心结论：首版只要高可用并可继续收敛，就已经具备明显交付价值。关联模块：项目定义、进展计划。</p></article>
+              </div>
+            </section>
+
+            <section id="outputs-tech" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Technical Deliverables</span>
+                  <h2>技术项详细交付</h2>
+                </div>
+                <p>这里承接那些已经做出来的技术定义和页面交付，不再让它们散落在对话里。</p>
+              </div>
+              <div class="card-grid">
+                <article class="card"><h3>技术交付工作台定义稿</h3><p>类型：页面交付。服务对象：技术交付模块。当前状态：在用。</p></article>
+                <article class="card"><h3>技术分层案例矩阵定义稿</h3><p>类型：案例框架。服务对象：案例矩阵模块。当前状态：在用。</p></article>
+                <article class="card"><h3>前三层定义修正版</h3><p>类型：概念定义。服务对象：技术总链路、技术交付。当前状态：在用。</p></article>
+                <article class="card"><h3>后三层分工修正版</h3><p>类型：概念定义。服务对象：案例矩阵、技术总链路。当前状态：在用。</p></article>
+                <article class="card"><h3>核心对象清单</h3><p>类型：对象模型。服务对象：结构化加工、知识沉淀。当前状态：进行中。</p></article>
+                <article class="card"><h3>阶段地图与建设边界</h3><p>类型：计划定义。服务对象：进展计划、技术交付。当前状态：在用。</p></article>
+              </div>
+            </section>
+
+            <section id="outputs-history" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">History and Reference</span>
+                  <h2>历史版本 / 关联引用</h2>
+                </div>
+                <p>当前产出要能和旧稿、旧页、旧表达关联，避免断裂。</p>
+              </div>
+              <div class="card-grid">
+                <article class="archive-card"><h3><a href="clm-current-archive.html">当前主入口快照</a></h3><p>当前分支重构前的主入口保留在这里。</p></article>
+                <article class="archive-card"><h3><a href="tech-delivery.html">旧技术交付页</a></h3><p>用于追溯交付模块早期表达。</p></article>
+                <article class="archive-card"><h3><a href="tech-layered-knowledge-matrix.html">旧整合知识矩阵页</a></h3><p>用于追溯前三层与后三层合并表达。</p></article>
+                <article class="archive-card"><h3><a href="tech-case-matrix.html">旧案例矩阵页</a></h3><p>用于追溯宫保鸡丁案例和数据状态表达的早期版本。</p></article>
+              </div>
+            </section>
+          </section>
+
+          <section class="module-panel" data-module-panel="plan" hidden>
+            <section id="plan-current" class="section-card section-primary module-section">
+              <div class="section-heading">
+                <span class="eyebrow">Current Status</span>
+                <h1>当前状态</h1>
+                <p class="hero-subtitle">从概念路线图升级为真实计划页，先看状态，再看模块时间安排。</p>
+              </div>
+              <div class="three-column">
+                <article class="status-card"><span class="status-pill chip-success">已完成</span><h3>目标与主链统一</h3><p>项目定义、技术主链、前三层 / 后三层分工已形成稳定表达。</p></article>
+                <article class="status-card"><span class="status-pill chip-accent">进行中</span><h3>对象与工作台重构</h3><p>对象模型、样板任务闭环、统一工作台表达正在推进。</p></article>
+                <article class="status-card"><span class="status-pill chip-warn">规划中</span><h3>规则与输出执行稳定化</h3><p>规则引擎、审核要求和设备侧稳定输出仍需补齐。</p></article>
+              </div>
+            </section>
+
+            <section id="plan-modules" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Module Plan</span>
+                  <h2>模块计划</h2>
+                </div>
+                <p>模块维度先锁住，时间安排才不会漂。</p>
+              </div>
+              <div class="card-grid">
+                <article class="road-card"><h3>项目定义统一</h3><p>状态：已完成</p></article>
+                <article class="road-card"><h3>对象模型定义</h3><p>状态：进行中</p></article>
+                <article class="road-card"><h3>数据接入层</h3><p>状态：进行中</p></article>
+                <article class="road-card"><h3>结构化加工层</h3><p>状态：规划中</p></article>
+                <article class="road-card"><h3>知识沉淀层</h3><p>状态：规划中</p></article>
+                <article class="road-card"><h3>检索层</h3><p>状态：规划中</p></article>
+                <article class="road-card"><h3>规则层</h3><p>状态：未开始</p></article>
+                <article class="road-card"><h3>样板任务</h3><p>状态：进行中</p></article>
+                <article class="road-card"><h3>页面工作台</h3><p>状态：联调中</p></article>
+              </div>
+            </section>
+
+            <section id="plan-time" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Time Plan</span>
+                  <h2>时间计划</h2>
+                </div>
+                <p>横向按月份，纵向按模块，状态用颜色和标签表达。</p>
+              </div>
+              <div class="plan-board panel">
+                <div class="plan-row plan-head">
+                  <div class="plan-module">模块</div>
+                  <div class="plan-slot">3 月</div>
+                  <div class="plan-slot">4 月</div>
+                  <div class="plan-slot">5 月</div>
+                  <div class="plan-slot">6 月</div>
+                </div>
+                <div class="plan-row">
+                  <div class="plan-module">项目定义统一</div>
+                  <div class="plan-slot done">已完成</div>
+                  <div class="plan-slot"></div>
+                  <div class="plan-slot"></div>
+                  <div class="plan-slot"></div>
+                </div>
+                <div class="plan-row">
+                  <div class="plan-module">对象模型定义</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot pending">联调中</div>
+                  <div class="plan-slot"></div>
+                </div>
+                <div class="plan-row">
+                  <div class="plan-module">数据接入层</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot pending">联调中</div>
+                  <div class="plan-slot"></div>
+                </div>
+                <div class="plan-row">
+                  <div class="plan-module">结构化加工层</div>
+                  <div class="plan-slot pending">规划中</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot pending">联调中</div>
+                </div>
+                <div class="plan-row">
+                  <div class="plan-module">知识沉淀层</div>
+                  <div class="plan-slot"></div>
+                  <div class="plan-slot pending">规划中</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot active">进行中</div>
+                </div>
+                <div class="plan-row">
+                  <div class="plan-module">检索层</div>
+                  <div class="plan-slot"></div>
+                  <div class="plan-slot pending">规划中</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot active">进行中</div>
+                </div>
+                <div class="plan-row">
+                  <div class="plan-module">规则层</div>
+                  <div class="plan-slot"></div>
+                  <div class="plan-slot"></div>
+                  <div class="plan-slot pending">规划中</div>
+                  <div class="plan-slot active">进行中</div>
+                </div>
+                <div class="plan-row">
+                  <div class="plan-module">样板任务</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot pending">联调中</div>
+                  <div class="plan-slot done">目标完成</div>
+                </div>
+                <div class="plan-row">
+                  <div class="plan-module">页面工作台</div>
+                  <div class="plan-slot active">进行中</div>
+                  <div class="plan-slot pending">联调中</div>
+                  <div class="plan-slot done">已完成</div>
+                  <div class="plan-slot"></div>
+                </div>
+              </div>
+            </section>
+
+            <section id="plan-milestones" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Milestones</span>
+                  <h2>里程碑</h2>
+                </div>
+                <p>每个里程碑都要绑定交付物形态，而不是只写抽象节点。</p>
+              </div>
+              <div class="timeline">
+                <div class="timeline-step"><strong>M1：项目定义与三类场景统一</strong><p>目标：锁定第一阶段目标和三类场景边界。交付物形态：项目定义页定稿。依赖前置项：无。关联模块：项目定义。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>M2：技术总链路定稿</strong><p>目标：锁定 7 层主链和每层输入 / 处理 / 输出 / 建设重点。交付物形态：技术总链路模块定稿。依赖前置项：M1。关联模块：技术总链路。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>M3：核心对象模型第一版</strong><p>目标：锁定菜品、菜谱版本、步骤、参数、调整、评价等对象。交付物形态：对象模型初版。依赖前置项：M1、M2。关联模块：技术交付、阶段性工作产出。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>M4：前三层定义与输入源分类完成</strong><p>目标：把接入层、结构化层、知识沉淀层定义稳定下来。交付物形态：前三层定义稿与输入源分类。依赖前置项：M2、M3。关联模块：技术总链路、阶段性工作产出。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>M5：技术交付工作台第一版</strong><p>目标：锁最终交付物、系统层、知识状态和能力状态。交付物形态：技术交付模块第一版。依赖前置项：M3、M4。关联模块：技术交付。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>M6：案例矩阵第一版</strong><p>目标：把“北京口味宫保鸡丁”案例和 5 种数据状态稳定下来。交付物形态：案例矩阵第一版。依赖前置项：M2、M5。关联模块：案例矩阵。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>M7：样板任务链路定义</strong><p>目标：锁定“一份菜谱扩到多份菜谱”等样板任务闭环。交付物形态：样板任务定义稿。依赖前置项：M3、M5。关联模块：样板闭环。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>M8：阶段性工作产出挂载体系建立</strong><p>目标：让维度展开、经验规则、调研记录和技术交付项有固定归档位置。交付物形态：阶段性工作产出模块。依赖前置项：M5、M6。关联模块：阶段性工作产出。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>M9：最小可跑通链路打通</strong><p>目标：从输入到输出执行到回写至少跑通一条任务链。交付物形态：最小可跑通样板结果。依赖前置项：M6、M7。关联模块：样板闭环、技术交付。</p></div>
+                <div class="timeline-arrow">↓</div>
+                <div class="timeline-step"><strong>M10：首轮反馈回写与知识沉淀验证</strong><p>目标：验证回写结果能否形成新知识和新规则候选。交付物形态：回写验证记录与知识沉淀样例。依赖前置项：M8、M9。关联模块：技术交付、阶段性工作产出。</p></div>
+              </div>
+            </section>
+
+            <section id="plan-outputs" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Current Outputs</span>
+                  <h2>当前阶段已形成产出</h2>
+                </div>
+                <p>计划和交付物要挂起来，这里只列当前阶段已经沉淀出来的关键内容。</p>
+              </div>
+              <div class="card-grid">
+                <article class="card"><h3>技术交付工作台定义稿</h3><p>关联模块：技术交付、阶段性工作产出。</p></article>
+                <article class="card"><h3>技术分层案例矩阵定义稿</h3><p>关联模块：案例矩阵、阶段性工作产出。</p></article>
+                <article class="card"><h3>菜谱维度展开底稿</h3><p>关联模块：阶段性工作产出、技术交付。</p></article>
+                <article class="card"><h3>核心对象模型初版</h3><p>关联模块：技术交付、技术总链路。</p></article>
+                <article class="card"><h3>阶段地图与建设边界</h3><p>关联模块：技术交付、进展计划。</p></article>
+                <article class="card"><h3>样板任务定义稿</h3><p>关联模块：样板闭环、进展计划。</p></article>
+              </div>
+              <div class="summary-banner" style="margin-top: 18px;">
+                <strong>这些产出的详细内容见：阶段性工作产出模块</strong>
+                <p>进展计划页只负责说明“已经形成了什么”，具体内容沉淀统一回到阶段性工作产出模块。</p>
+              </div>
+            </section>
+
+            <section id="plan-risk" class="section-card section-primary module-section">
+              <div class="section-heading section-heading-inline">
+                <div>
+                  <span class="eyebrow">Risks and Dependencies</span>
+                  <h2>风险与依赖</h2>
+                </div>
+                <p>把依赖说清楚，计划才不是聊天式路线图。</p>
+              </div>
+              <div class="three-column">
+                <article class="card"><h3>关键依赖</h3><p>对象模型不锁，结构化加工和知识沉淀无法稳定推进。</p></article>
+                <article class="card"><h3>主要风险</h3><p>如果场景边界重新放宽，样板任务就会失焦，导致整个计划拖散。</p></article>
+                <article class="card"><h3>控制方式</h3><p>先守住场景 1 主线和样板闭环，再逐步打开更多能力。</p></article>
+              </div>
+            </section>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <strong>clm-rebuild.html</strong>
+        <p>当前页是 `clm-rebuild` 分支上的新重构主页面。旧页面继续保留为历史参考，新结构在这里集中推进。</p>
+      </footer>
+    </div>
+
+    <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="clm-rebuild.js"></script>
+  </body>
+</html>
