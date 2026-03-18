@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>进展与治理专题页</title>
+    <link rel="stylesheet" href="../../assets/css/workspace-light.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand">
+            <span class="brand-kicker">Governance View</span>
+            <span class="brand-title">进展与治理专题页</span>
+            <span class="brand-note">承接任务拆解、时间计划、里程碑、页面归位和版本治理。</span>
+          </div>
+          <div class="header-actions">
+            <button class="page-switch version-toggle" type="button" aria-expanded="false" aria-controls="versionPanel">历史版本</button>
+          </div>
+        </div>
+        <div id="versionPanel" class="version-panel" hidden>
+          <div class="version-panel-grid">
+            <article class="version-card version-card-current">
+              <div class="version-meta"><span class="mini-tag">当前</span><span class="mini-tag">治理页</span><span class="mini-tag">clm-rebuild</span></div>
+              <h3>2026-03-18 / 平台重组版</h3>
+              <p>进展计划和阶段性工作产出不再是两张皮，而是通过任务、时间、产出和技术层建立映射。</p>
+              <a class="mini-link" href="../../index.html">返回总界面</a>
+            </article>
+            <article class="version-card"><div class="version-meta"><span class="mini-tag">专题</span><span class="mini-tag">现行</span></div><h3>建设进展与路线图页</h3><p>保留现有任务台账、甘特图和里程碑正文。</p><a class="mini-link" href="progress-and-roadmap.html">查看</a></article>
+            <article class="version-card"><div class="version-meta"><span class="mini-tag">任务页</span><span class="mini-tag">现行</span></div><h3>建设计划子任务页</h3><p>用于继续单独推进计划看板和任务台账。</p><a class="mini-link" href="../tasks/build-plan-board.html">查看</a></article>
+            <article class="version-card"><div class="version-meta"><span class="mini-tag">快照</span><span class="mini-tag">封板</span></div><h3>阶段性封板快照</h3><p>保留平台重组前的治理与计划状态。</p><a class="mini-link" href="../archive/clm-rebuild-snapshot-20260317-seal.html">查看</a></article>
+          </div>
+        </div>
+        <div class="page-tabs">
+          <a class="page-tab" href="../../index.html">总览</a>
+          <a class="page-tab" href="construction-view.html">建设视角</a>
+          <a class="page-tab" href="operation-view.html">运行视角</a>
+          <a class="page-tab" href="technical-delivery-workbench.html">技术交付</a>
+          <a class="page-tab" href="case-and-samples.html">案例与样板</a>
+          <a class="page-tab" href="stage-outputs-hub.html">阶段性工作产出</a>
+          <a class="page-tab current" href="governance-view.html">进展与治理</a>
+        </div>
+      </header>
+
+      <main class="platform-layout">
+        <aside class="platform-sidebar">
+          <h3>治理页目录</h3>
+          <p>治理页负责回答“现在做到哪、页面如何归位、版本如何治理”。</p>
+          <nav class="side-link-group">
+            <a class="side-link" href="#positioning">页面定位</a>
+            <a class="side-link" href="#plan">任务与时间</a>
+            <a class="side-link" href="#outputs">产出与里程碑</a>
+            <a class="side-link" href="#placement">页面归位总表</a>
+            <a class="side-link" href="#versions">版本治理</a>
+          </nav>
+        </aside>
+
+        <div class="platform-main">
+          <section id="positioning" class="platform-section">
+            <div class="section-heading">
+              <span class="eyebrow">Governance Positioning</span>
+              <h1>进展与治理回答什么</h1>
+              <p class="hero-subtitle">回答现在做到哪、接下来做什么、页面如何归位、版本如何持续治理。</p>
+            </div>
+            <p class="platform-note">治理页不是重复所有正文，而是负责把任务、时间、产出、页面和版本放进同一张治理图里。计划页和产出页的正文继续保留，但在这里统一收口。</p>
+          </section>
+
+          <section id="plan" class="platform-section">
+            <div class="section-heading section-heading-inline">
+              <div><span class="eyebrow">Plan Mapping</span><h2>任务与时间</h2></div>
+              <p>当前治理页以“任务台账 + 甘特图 + 技术层映射”作为主治理方式。</p>
+            </div>
+            <div class="two-column">
+              <div class="info-box"><strong>主正文继续保留在</strong><p><a class="mini-link-inline" href="progress-and-roadmap.html">建设进展与路线图页</a> 与 <a class="mini-link-inline" href="../tasks/build-plan-board.html">建设计划子任务页</a>。</p></div>
+              <div class="info-box"><strong>治理页当前作用</strong><p>只负责把任务、时间、产出和页面结构归位，不再把所有任务正文重复抄一遍。</p></div>
+            </div>
+          </section>
+
+          <section id="outputs" class="platform-section">
+            <div class="section-heading section-heading-inline">
+              <div><span class="eyebrow">Outputs and Milestones</span><h2>当前阶段已形成产出 / 待形成产出</h2></div>
+              <p>治理页负责把产出和里程碑挂起来，避免计划和成果脱节。</p>
+            </div>
+            <div class="two-column">
+              <div class="info-box">
+                <strong>已形成产出</strong>
+                <ul>
+                  <li>技术交付工作台定义稿</li>
+                  <li>技术分层案例矩阵定义稿</li>
+                  <li>核心对象模型初版</li>
+                  <li>阶段地图与建设边界</li>
+                  <li>菜谱维度展开底稿</li>
+                  <li>经验规则条目模板</li>
+                </ul>
+              </div>
+              <div class="info-box">
+                <strong>待形成产出</strong>
+                <ul>
+                  <li>宫保鸡丁案例全链路定稿</li>
+                  <li>调研记录结构与关联机制</li>
+                  <li>规则条目批量录入</li>
+                  <li>样板任务闭环页</li>
+                  <li>任务—分层映射图</li>
+                  <li>反馈回写机制可视定义</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="placement" class="platform-section">
+            <div class="section-heading section-heading-inline">
+              <div><span class="eyebrow">Placement Table</span><h2>页面归位总表</h2></div>
+              <p>这张表用于防止页面继续重复讲同一个问题。</p>
+            </div>
+            <div class="table-wrap">
+              <div class="ledger-table">
+                <div class="ledger-row wide ledger-head">
+                  <div>页面</div><div>当前角色</div><div>所属层级</div><div>唯一主问题</div><div>是否当前版本</div><div>是否保留历史</div><div>说明</div><div>去向</div>
+                </div>
+                <div class="ledger-row wide"><div>index.html</div><div>总界面</div><div>主入口</div><div>我们整体在建什么</div><div>是</div><div>保留</div><div>只做导航与收口</div><div>当前主版本</div></div>
+                <div class="ledger-row wide"><div>construction-view.html</div><div>视角页</div><div>建设视角</div><div>系统资产如何被建设出来</div><div>是</div><div>保留</div><div>主归属技术总链路建设部分</div><div>当前主版本</div></div>
+                <div class="ledger-row wide"><div>operation-view.html</div><div>视角页</div><div>运行视角</div><div>客户需求进入后系统如何工作</div><div>是</div><div>保留</div><div>主归属运行链路</div><div>当前主版本</div></div>
+                <div class="ledger-row wide"><div>technical-delivery-workbench.html</div><div>专题页</div><div>技术交付</div><div>最终交付物到底是什么</div><div>是</div><div>保留</div><div>继续独立保留</div><div>当前专题</div></div>
+                <div class="ledger-row wide"><div>case-and-samples.html</div><div>专题入口</div><div>案例与样板</div><div>系统在真实案例和数据状态下怎么工作</div><div>是</div><div>保留</div><div>统一承接案例专题群</div><div>当前主版本</div></div>
+                <div class="ledger-row wide"><div>stage-outputs-hub.html</div><div>专题入口</div><div>阶段性工作产出</div><div>当前已经沉淀了哪些成果物</div><div>是</div><div>保留</div><div>成果总台 + 子任务入口</div><div>当前主版本</div></div>
+                <div class="ledger-row wide"><div>governance-view.html</div><div>专题页</div><div>进展与治理</div><div>现在做到哪、版本如何治理</div><div>是</div><div>保留</div><div>计划、里程碑、版本治理统一收口</div><div>当前主版本</div></div>
+                <div class="ledger-row wide"><div>clm-rebuild.html</div><div>历史综合页</div><div>旧重构页</div><div>上一轮综合重构表达是什么</div><div>否</div><div>保留</div><div>不删，只转为历史参考</div><div>历史版本</div></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="versions" class="platform-section">
+            <div class="section-heading section-heading-inline">
+              <div><span class="eyebrow">Version Governance</span><h2>版本治理说明</h2></div>
+              <p>页面里的历史版本面板给快速回查，README 给详细工程治理说明。</p>
+            </div>
+            <div class="two-column">
+              <div class="info-box"><strong>页面内版本说明</strong><p>服务快速回查：当前版、快照页、旧专题页、归档页一键进入。</p></div>
+              <div class="info-box"><strong>README 版本日志</strong><p>服务工程治理：记录版本名称、改动范围、页面地图、子任务用途和归位总表。</p></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../../assets/js/platform-shell.js"></script>
+  </body>
+</html>

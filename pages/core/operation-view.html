@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>运行视角 / Operation View</title>
+    <link rel="stylesheet" href="../../assets/css/workspace-light.css" />
+  </head>
+  <body class="workspace-page">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="brand">
+            <span class="brand-kicker">Operation View</span>
+            <span class="brand-title">运行视角</span>
+            <span class="brand-note">回答客户真实提出需求时，系统如何逐层处理、分级输出并正确失败。</span>
+          </div>
+          <div class="header-actions">
+            <button class="page-switch version-toggle" type="button" aria-expanded="false" aria-controls="versionPanel">历史版本</button>
+          </div>
+        </div>
+        <div id="versionPanel" class="version-panel" hidden>
+          <div class="version-panel-grid">
+            <article class="version-card version-card-current">
+              <div class="version-meta"><span class="mini-tag">当前</span><span class="mini-tag">运行视角</span><span class="mini-tag">clm-rebuild</span></div>
+              <h3>2026-03-18 / 平台重组版</h3>
+              <p>运行视角把需求输入、检索、规则、推理、输出执行和正确失败放在一条主线上。</p>
+              <a class="mini-link" href="../../index.html">返回总界面</a>
+            </article>
+            <article class="version-card"><div class="version-meta"><span class="mini-tag">历史</span><span class="mini-tag">重构页</span></div><h3>CLM Rebuild Workspace</h3><p>上一轮综合重构页，保留案例矩阵与运行链路表达。</p><a class="mini-link" href="../../clm-rebuild.html">查看</a></article>
+            <article class="version-card"><div class="version-meta"><span class="mini-tag">专题</span><span class="mini-tag">旧版</span></div><h3>旧版案例矩阵页</h3><p>早期运行链路和数据状态表达，可与当前运行视角对照。</p><a class="mini-link" href="../archive/tech-case-matrix.html">查看</a></article>
+            <article class="version-card"><div class="version-meta"><span class="mini-tag">快照</span><span class="mini-tag">封板</span></div><h3>阶段性封板快照</h3><p>保留平台重组前的稳定基线。</p><a class="mini-link" href="../archive/clm-rebuild-snapshot-20260317-seal.html">查看</a></article>
+          </div>
+        </div>
+        <div class="page-tabs">
+          <a class="page-tab" href="../../index.html">总览</a>
+          <a class="page-tab" href="construction-view.html">建设视角</a>
+          <a class="page-tab current" href="operation-view.html">运行视角</a>
+          <a class="page-tab" href="technical-delivery-workbench.html">技术交付</a>
+          <a class="page-tab" href="case-and-samples.html">案例与样板</a>
+          <a class="page-tab" href="stage-outputs-hub.html">阶段性工作产出</a>
+          <a class="page-tab" href="governance-view.html">进展与治理</a>
+        </div>
+      </header>
+
+      <main class="platform-layout">
+        <aside class="platform-sidebar">
+          <h3>运行视角目录</h3>
+          <p>从需求输入开始，看到系统如何逐层工作以及何时正确失败。</p>
+          <nav class="side-link-group">
+            <a class="side-link" href="#positioning">页面定位</a>
+            <a class="side-link" href="#runtime-chain">运行主链</a>
+            <a class="side-link" href="#output-grade">输出分级</a>
+            <a class="side-link" href="#failure">正确失败机制</a>
+            <a class="side-link" href="#topics">关联专题</a>
+          </nav>
+        </aside>
+
+        <div class="platform-main">
+          <section id="positioning" class="platform-section">
+            <div class="section-heading">
+              <span class="eyebrow">Runtime Positioning</span>
+              <h1>运行视角回答什么</h1>
+              <p class="hero-subtitle">回答当客户提出真实需求时，系统如何工作，而不是系统如何被建设出来。</p>
+            </div>
+            <p class="platform-note">运行视角主归属此前案例矩阵和运行链路中的内容：需求输入、需求拆解、检索层、规则与策略层、模型推理层、输出执行层、验收反馈和正确失败机制。</p>
+          </section>
+
+          <section id="runtime-chain" class="platform-section">
+            <div class="section-heading section-heading-inline">
+              <div><span class="eyebrow">Runtime Chain</span><h2>运行主链</h2></div>
+              <p>这条链只关心系统如何响应当前任务，而不展开系统建设过程。</p>
+            </div>
+            <div class="ledger-table">
+              <div class="ledger-row ledger-head">
+                <div>运行层</div><div>当前输入</div><div>处理动作</div><div>当前输出</div><div>强弱判断</div><div>典型风险</div><div>主归属专题</div>
+              </div>
+              <div class="ledger-row">
+                <div>需求输入</div><div>客户文本、语音转写、图片、设备上下文</div><div>识别任务类型、拆出模糊点</div><div>可检索任务表达</div><div>输入是否清晰</div><div>需求本身过宽或缺上下文</div><div>运行视角</div>
+              </div>
+              <div class="ledger-row">
+                <div>检索层</div><div>任务表达、上下文、约束</div><div>召回相关菜谱、案例、规则、知识条目</div><div>候选集合</div><div>看数据命中强弱</div><div>召回为空或命中弱</div><div><a class="mini-link" href="layered-case-matrix.html">案例矩阵</a></div>
+              </div>
+              <div class="ledger-row">
+                <div>规则与策略层</div><div>候选集合、风险等级、设备约束</div><div>过滤、裁边界、决定是否补问或审核</div><div>可进入下一步的范围</div><div>看是否允许强建议</div><div>规则不稳或边界不清</div><div><a class="mini-link" href="layered-case-matrix.html">案例矩阵</a></div>
+              </div>
+              <div class="ledger-row">
+                <div>模型推理层</div><div>规则筛后的少量候选</div><div>理解、比较、排序、解释与建议</div><div>推荐结果 / 补问 / 风险说明</div><div>看上下文是否足够</div><div>把弱证据说成强结论</div><div><a class="mini-link" href="layered-case-matrix.html">案例矩阵</a></div>
+              </div>
+              <div class="ledger-row">
+                <div>输出执行层</div><div>建议结果、审核要求、设备上下文</div><div>输出执行方案、转人工、进入知识建设队列</div><div>可执行结果或后续动作</div><div>看是否能真正落地</div><div>没有验证就直接执行</div><div><a class="mini-link" href="sample-scenario-loop.html">样板闭环</a></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="output-grade" class="platform-section">
+            <div class="section-heading section-heading-inline">
+              <div><span class="eyebrow">Output Grading</span><h2>输出分级</h2></div>
+              <p>同一技术框架下，不同数据状态会触发不同强度的输出。</p>
+            </div>
+            <div class="entry-grid">
+              <div class="info-box"><strong>强建议</strong><p>数据充分、规则稳定、风险可控时，可进入建议级到接近执行级输出。</p></div>
+              <div class="info-box"><strong>建议级</strong><p>候选和理由可给出，但仍需补问、人工确认或设备约束检查。</p></div>
+              <div class="info-box"><strong>参考级</strong><p>只能给相似案例、相近路径和缺口提示，不能装作确定。</p></div>
+              <div class="info-box"><strong>不支持强建议</strong><p>当知识和数据明显不足时，应主动转向补问、转人工或知识建设。</p></div>
+            </div>
+          </section>
+
+          <section id="failure" class="platform-section">
+            <div class="section-heading section-heading-inline">
+              <div><span class="eyebrow">Failure Handling</span><h2>正确失败机制</h2></div>
+              <p>成熟系统不只是会有答案时给答案，也要在没答案时正确工作。</p>
+            </div>
+            <div class="entry-grid">
+              <div class="info-box"><strong>补问</strong><p>补充设备型号、偏甜还是偏辣、试菜还是正式交付等关键信息。</p></div>
+              <div class="info-box"><strong>弱建议</strong><p>只给候选、理由和风险提示，不直接输出参数包或强结论。</p></div>
+              <div class="info-box"><strong>转人工</strong><p>进入口味工程师、业务负责人或现场交付链路。</p></div>
+              <div class="info-box"><strong>进入知识建设队列</strong><p>把当前不足的内容回流成后续建设任务，而不是直接丢失。</p></div>
+            </div>
+          </section>
+
+          <section id="topics" class="platform-section">
+            <div class="section-heading section-heading-inline">
+              <div><span class="eyebrow">Related Topics</span><h2>关联专题</h2></div>
+              <p>运行视角是逻辑主线，具体案例、矩阵和样板页继续承接细节。</p>
+            </div>
+            <div class="entry-grid">
+              <article class="entry-card"><h3><a class="mini-link-inline" href="layered-case-matrix.html">技术分层案例矩阵页</a></h3><p>承接不同数据状态下的分层处理和输出能力分级。</p></article>
+              <article class="entry-card"><h3><a class="mini-link-inline" href="sample-scenario-loop.html">样板场景闭环页</a></h3><p>承接样板任务从输入到回写的运行闭环。</p></article>
+              <article class="entry-card"><h3><a class="mini-link-inline" href="case-and-samples.html">案例与样板专题页</a></h3><p>作为案例专题入口，统一承接案例矩阵、样板案例和失败处理。</p></article>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="../../assets/js/platform-shell.js"></script>
+  </body>
+</html>
